@@ -443,6 +443,89 @@ Exemplo:
 
 ---
 
+## Codex: IA no terminal {.center}
+
+💻 **Codex** são interfaces de terminal (TUI) que conectam LLMs ao seu computador — vão além do chatbot web:
+
+- Lêem e escrevem **arquivos locais**  
+- Executam **comandos no terminal**  
+- Operam **direto no seu projeto** — contexto real, não texto colado
+
+> 💡 Pense neles como um "assistente de programação e automação" que mora no seu terminal.
+
+---
+
+## Codex: principais exemplos {.center}
+
+| Ferramenta | Empresa | Modelo | Código aberto |
+|:-----------|:--------|:-------|:------------:|
+| **Codex CLI** | OpenAI | GPT-5 / o-series | Sim |
+| **Claude Code** | Anthropic | Claude | Não |
+| **OpenCode** | Comunidade | Ollama (local) | Sim |
+
+📋 Cada uma tem abordagem própria, mas o princípio é o mesmo: **IA que atua no seu sistema de arquivos e terminal.**
+
+---
+
+## Codex CLI (OpenAI) {.center}
+
+🔑 Roda modelos da OpenAI (GPT-5, o-series) direto no terminal
+
+- Modos: **suggest** (sugere, você aprova), **auto-edit** (edita com aprovação), **full-auto** (autônomo)  
+- Pode ler código, escrever arquivos, rodar comandos  
+- Requer **API Key** da OpenAI (uso pago)
+
+```bash
+codex "Crie um arquivo README.md para este projeto"
+```
+
+---
+
+## Claude Code (Anthropic) {.center}
+
+🔑 Roda o modelo Claude no terminal com acesso ao seu projeto
+
+- Entende o código do repositório automaticamente  
+- Pode criar, editar e buscar arquivos  
+- Requer **API Key** da Anthropic (uso pago)  
+- Indicado para projetos de software
+
+```bash
+claude "Explique a função principal deste repositório"
+```
+
+---
+
+## OpenCode {.center}
+
+🔓 Roda modelos **locais via Ollama** — sem API Key, sem custo
+
+- Usa modelos que você já baixou: phi3, gemma3, qwen3...  
+- **Privacidade total** — nada sai do computador  
+- Ideal para experimentar codex sem pagar
+
+```bash
+opencode "Revise o estilo deste texto e sugira melhorias"
+```
+
+---
+
+## Codex: quando usar? {.center}
+
+📌 **Use codex quando:**
+
+- Precisa que a IA **leia ou altere arquivos** no seu computador  
+- Quer automação de tarefas repetitivas em projetos  
+- Trabalha com **código, dados ou textos** estruturados
+
+⚠️ **Cuidados:**
+
+- APIs pagas — custo por token  
+- Sempre **revise** o que o codex cria ou modifica  
+- Arquivos sensíveis: prefira modelos locais (OpenCode + Ollama)
+
+---
+
 ## 3. Modelos locais com Ollama {.center}
 
 ---
