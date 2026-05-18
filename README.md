@@ -1,37 +1,91 @@
-# Oficina: "IA Generativa na Vida Universitária: Pesquisa, Estudo e Escrita com Chatbots e Modelos Locais" — UNILAB
+# IA Generativa na Vida Universitária: Pesquisa, Estudo e Escrita com Chatbots e Modelos Locais
 
-Autor: Eric Brasil (UNILAB • PPGIHD/UFRRJ • LABHDUFBA)
+**Ministrante:** Prof. Eric Brasil (UNILAB • PPGIHD/UFRRJ • LABHDUFBA)  
+**Data:** 19/05/2026 (terça-feira) | **Horário:** 9h30–11h30 | **Local:** a definir pelo núcleo  
+**Público-alvo:** Estudantes de graduação e pós-graduação e docentes da UNILAB
 
-## Descrição
+---
 
-Repositório que reúne os materiais da oficina prática apresentada na UNILAB (19 de maio de 2026). A atividade aborda fundamentos conceituais da IA generativa, melhores práticas com chatbots web (ChatGPT, Gemini, Copilot) no contexto universitário, e demonstração prática de modelos abertos executados localmente via Ollama.
+## Resumo
+
+Esta oficina apresenta os fundamentos e usos práticos da inteligência artificial generativa — em especial os Large Language Models (LLMs) — no contexto universitário. Serão abordados: o que é IA generativa e como funcionam os chatbots baseados em LLMs; estratégias e melhores práticas para uso de chatbots web (ChatGPT, Gemini, Copilot) na pesquisa, no estudo e na escrita acadêmica; cuidados éticos, vieses e alucinações; e uma demonstração prática de execução de modelos abertos em máquina local com Ollama. A oficina é voltada para estudantes de graduação e pós-graduação e docentes que desejam incorporar essas ferramentas de forma crítica e responsável em suas rotinas acadêmicas.
+
+## Estrutura da Oficina
+
+### Parte 1 — O que é IA generativa? (~30min)
+
+- IA generativa ≠ IA Geral: distinções essenciais
+- LLMs: o que são, como funcionam (treinamento, transformers, parâmetros)
+- Alucinações, vieses e limitações
+- Custo ambiental e infraestrutural
+
+### Parte 2 — Melhores práticas com chatbots web (~45min)
+
+- ChatGPT, Gemini, Copilot: semelhanças e diferenças
+- Prompt engineering básico
+- Usos na pesquisa, no estudo e na escrita acadêmica
+- Cuidados éticos: plágio, transparência, limites institucionais
+- Regra prática: a IA auxilia, não substitui o pensamento crítico
+
+### Parte 3 — Modelos locais com Ollama (~30min)
+
+- Modelos abertos vs. fechados: por que rodar localmente?
+- Instalação e comandos básicos do Ollama
+- Baixando e rodando modelos leves
+- Criando um Modelfile personalizado
+- Vantagens: privacidade, autonomia, reprodutibilidade
+
+### Encerramento — Discussão (~15min)
+
+- Balanço e perguntas
+
+## Conteúdo do repositório
+
+```
+oficina-ia-unilab/
+├── index.md                  # Fonte da apresentação (Quarto / Reveal.js)
+├── custom.scss               # Folha de estilos personalizada
+├── imgs/                     # Imagens usadas nos slides
+│   ├── logo.png
+│   └── privacy.png
+├── ollama_modelfile/
+│   └── Modelfile              # Exemplo de Modelfile (assistente de resumo)
+├── ollama_python/
+│   ├── read_doc.py            # Script Python para interagir com Ollama via API
+│   ├── resumo.txt             # Arquivo de exemplo para teste
+│   └── README.md              # Instruções do script
+├── CITATION.cff              # Metadados para citação
+├── LICENSE.md                # Licença CC BY-NC-SA 4.0
+└── README.md                 # Este arquivo
+```
+
+## Como renderizar os slides
+
+Requisitos: [Quarto](https://quarto.org) instalado.
+
+```bash
+git clone https://github.com/ericbrasiln/oficina-ia-unilab.git
+cd oficina-ia-unilab
+quarto render index.md --to revealjs
+```
+
+Abra `index.html` no navegador.
+
+## Requisitos para a oficina
+
+- Laptop (obrigatório)
+- Não é necessário conhecimento prévio de programação
+- Para a Parte 3: instalar o [Ollama](https://ollama.com) antes ou durante a oficina
 
 ## Observação sobre autoria e IA
 
 Parte dos conteúdos desta apresentação foi produzida com o apoio de assistentes de IA, sob a curadoria e as escolhas editoriais do professor Eric Brasil. O uso de assistentes de IA foi informado e acompanhado de decisões metodológicas do autor.
 
-## Conteúdo do repositório
+## Citação sugerida
 
-- `index.md` — fonte da apresentação (slides em formato Quarto / Reveal.js).
-- `custom.scss` — folha de estilos personalizada para os slides.
-- `imgs/` — imagens usadas nos slides (logo, ilustrações).
-- `ollama_modelfile/Modelfile` — exemplo de `Modelfile` usado para criar modelos locais no Ollama (resumo acadêmico).
-- `ollama_python/` — scripts e exemplos (ex.: script Python para enviar arquivos `.txt` e instruções ao servidor Ollama).
-- `LICENSE.md` — licença do material.
-- `CITATION.cff` — metadados para citação.
-- `README.md` — este arquivo (sumário e instruções essenciais).
+Eric Brasil (2026). oficina-ia-unilab: IA Generativa na Vida Universitária — materiais da oficina. GitHub. https://github.com/ericbrasiln/oficina-ia-unilab
 
-## Requisitos
-
-- Os participantes devem trazer laptop.
-- Não é necessário conhecimento prévio de programação.
-- Para a Parte 3 (Ollama): instalar o Ollama antes ou durante a oficina. Ver instruções nos slides.
-
-## Citação sugerida (curta)
-
-Eric Brasil (2026). oficina-ia-unilab: IA Generativa na Vida Universitária — materiais da oficina. GitHub.
-
-## Entrada BibTeX sugerida
+### BibTeX
 
 ```bibtex
 @misc{brasil_oficina-ia-unilab_2026,
@@ -45,10 +99,10 @@ Eric Brasil (2026). oficina-ia-unilab: IA Generativa na Vida Universitária — 
 
 ## Licença
 
-Os materiais textuais e os exemplos neste repositório estão sob a licença indicada em `LICENSE.md` (Creative Commons Atribuição‑NãoComercial‑CompartilhaIgual 4.0 Internacional). Consulte `LICENSE.md` para detalhes.
+Os materiais textuais e os exemplos neste repositório estão sob a licença Creative Commons Atribuição‑NãoComercial‑CompartilhaIgual 4.0 Internacional (CC BY‑NC‑SA 4.0). Consulte `LICENSE.md` para detalhes.
+
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" /></a>
 
 ## Contato
 
-Eric Brasil — veja informações de contato nos slides ou em https://ericbrasil.com.br/contact/
-
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" /></a><br />Este repositório está licenciado com uma Licença <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional</a>.
+Eric Brasil — [ericbrasil.com.br/contact](https://ericbrasil.com.br/contact/)
