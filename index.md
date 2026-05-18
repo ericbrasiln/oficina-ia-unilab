@@ -12,7 +12,7 @@ format:
     chalkboard:
       buttons: true
     footer: "Eric Brasil | <a href='https://ericbrasil.com.br/contact/'>Entre em contato</a> | Oficina UNILAB"
-    logo: imgs/logo.png
+    logo: https://raw.githubusercontent.com/ericbrasiln/cclhm0081/refs/heads/main/imgs/logos.png
 author:
   - name: Eric Brasil
     orcid: 0000-0001-5067-8475
