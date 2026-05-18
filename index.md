@@ -6,7 +6,7 @@ date-format: full
 lang: pt-br
 format:
   revealjs:
-    theme: [serif, custom.scss]
+    theme: serif
     slide-number: true
     incremental: false
     chalkboard:
@@ -102,6 +102,10 @@ Prof. Eric Brasil | UNILAB • PPGIHD/UFRRJ • LABHDUFBA
 - Aprende padrões a partir de grandes volumes de dados  
 - Não tem conscience nem compreensão — funciona com **probabilidades**
 
+---
+
+## IA Generativa ≠ IA Geral {.center}
+
 🧠 **IA Geral (AGI)**  
 
 - Habilidade de aprender qualquer tarefa cognitiva  
@@ -131,6 +135,10 @@ Simplificando:
 2. Aprende **padrões estatísticos** de linguagem  
 3. Quando você escreve algo, ele **prevê** qual palavra vem em seguida  
 4. Gera respostas **palavra por palavra**, com base em probabilidade
+
+---
+
+## Como os LLMs funcionam? {.center}
 
 > ⚠️ O modelo não "entende" nem "pensa" — ele **prevê texto provável**.
 
@@ -181,11 +189,17 @@ Resultado:
 - Cada parâmetro define como uma entrada influencia uma saída  
 - Quanto mais parâmetros, maior a capacidade de representar padrões complexos
 
+---
+
+## Parâmetros: o que o modelo "aprende"? {.center}
+
+
 | Modelo | Ano | Parâmetros  |
 |:-------|:----:|:----------:|
 | GPT-2 | 2019 | 1,5 bilhão  |
 | GPT-3 | 2020 | 175 bilhões |
 | GPT-4 | 2023 | ≃ 1 trilhão |
+| GPT-5 | 2025 | Mix of Experts |
 
 ---
 
@@ -196,6 +210,10 @@ Resultado:
 - O modelo **gera uma resposta incorreta ou inventada**, mas com aparência de verdade  
 - Resulta da forma como ele **estima probabilidades** — sem acesso à realidade  
 - O modelo não "sabe", apenas **prediz o texto mais provável**
+
+---
+
+## Alucinações {.center}
 
 📌 **Exemplos:**
 
@@ -226,6 +244,10 @@ Resultado:
 - **Viés de automação**: confiança cega nas respostas da IA  
 - **Viés de contexto**: falha ao interpretar corretamente nuances culturais
 
+---
+
+## Vieses na IA Generativa {.center}
+
 💡 Causa: dados de treinamento refletem **desigualdades e preconceitos da sociedade**
 
 ---
@@ -239,23 +261,23 @@ Resultado:
 - Mineração de recursos naturais para fabricar hardware (GPUs)  
 - Emissão de carbono associada a cada consulta
 
-> ⚠️ Cada prompt enviado consome energia. Use com consciência.
-
 ---
 
-## Modelos Fechados vs Abertos {.columns}
+## Modelos Fechados vs Abertos {.center}
 
-::: {.column width="50%"}
 **🔒 Modelos Fechados**
 
-- Desenvolvidos por empresas (OpenAI, Google)  
+- Desenvolvidos big techs (OpenAI, Google)  
 - Acesso via APIs ou interfaces web  
 - Pouca transparência (_black box_)  
 - Seus dados podem ser usados para treinar  
 - Exemplos: GPT-5, Claude, Gemini
-:::
 
-::: {.column width="50%"}
+---
+
+## Modelos Fechados vs Abertos {.center}
+
+
 **🔓 Modelos Abertos**
 
 - Código e pesos acessíveis e personalizáveis  
@@ -263,7 +285,6 @@ Resultado:
 - Maior controle e privacidade  
 - Ninguém vê seus prompts  
 - Exemplos: LLaMA, Mistral, Qwen, Gemma
-:::
 
 ---
 
@@ -313,6 +334,10 @@ Resultado:
 - **Organização de ideias**: "Me ajude a estruturar um projeto sobre X"  
 - **Tradução**: Traduzir resumos, abstracts, e-mails acadêmicos
 
+---
+
+## {.center}
+
 ⚠️ **Sempre verifique**: fontes, citações e dados gerados pela IA.
 
 ---
@@ -337,6 +362,10 @@ Resultado:
 - **Tradução**: versões em outros idiomas para publicação  
 - **Formatação**: ajustar citações, referências
 
+---
+
+## Usos na escrita acadêmica {.center}
+
 ❌ O que **NÃO** fazer:
 
 - Deixar a IA escrever o texto por você  
@@ -348,6 +377,10 @@ Resultado:
 ## Regra prática {.center}
 
 > 🎯 **A IA auxilia, não substitui o pensamento crítico.**
+
+---
+
+## Regra prática {.center}
 
 Use como:
 
@@ -399,6 +432,12 @@ Exemplo:
 ⚠️ O que a portaria **veda**:
 
 > **d)** é vedada a submissão de conteúdo gerado por IAG como se fosse de autoria humana, sendo os autores integralmente responsáveis pelo conteúdo final, inclusive por eventuais plágios ou imprecisões geradas pela IAG;
+
+---
+
+## Portaria CNPq 2.664/2026: vedações {.center}
+
+⚠️ O que a portaria **veda**:
 
 > **e)** é vedada a inserção de projetos de pesquisa de terceiros em ferramentas de IAG para elaboração de pareceres científicos;
 
