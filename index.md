@@ -561,35 +561,37 @@ opencode "Revise o estilo deste texto e sugira melhorias"
 
 ---
 
-## Instalação {.center}
+## Instalação do Ollama {.center}
 
-### 🐧 Linux (Ubuntu)
+📌 **Passo 1:** Baixe e instale o Ollama no seu computador
 
-```bash
-curl -fsSL https://ollama.com/install.sh | sh
-```
+- 🪟 **Windows**: [ollama.com/download/windows](https://ollama.com/download/windows)  
+- 🍎 **macOS**: [ollama.com/download/mac](https://ollama.com/download/mac)  
+- 🐧 **Linux**: siga as instruções em [ollama.com/download/linux](https://ollama.com/download/linux)
 
-### 🪟 Windows 
-
-Baixe o instalador em:
-
-[https://ollama.com/download/windows](https://ollama.com/download/windows)
+💡 A instalação é simples: baixe, execute e siga os passos na tela.
 
 ---
 
-## Conferindo a instalação {.center}
+## Aplicativo Ollama {.center}
 
-```bash
-# Verificar se o serviço está ativo
-ollama --version
+🖥️ Depois de instalar, abra o **aplicativo Ollama** no seu computador:
 
-# Listar modelos instalados
-ollama list
-```
+- Ele fica rodando em **segundo plano** (ícone na bandeja do sistema)  
+- Não precisa usar o terminal — tudo pode ser feito pelo app  
+- O app mostra os **modelos disponíveis** e permite baixar e conversar
 
 ---
 
-## Baixando modelos {.center}
+## Baixando modelos pelo app {.center}
+
+📦 No aplicativo Ollama, clique em **"Models"** e busque:
+
+- `phi3:mini` — leve, rápido, bom para textos curtos  
+- `gemma3:4b` — bom equilíbrio entre qualidade e velocidade  
+- `qwen3:0.6b` — ultra-leve, ideal para testes
+
+💡 Ou baixe pelo terminal, se preferir:
 
 ```bash
 ollama pull phi3:mini
@@ -597,127 +599,99 @@ ollama pull gemma3:4b
 ollama pull qwen3:0.6b
 ```
 
-📌 *Dica:* Prefira modelos **small/mini** em PCs sem GPU.
+📌 Prefira modelos **small/mini** em PCs sem placa de vídeo dedicada (GPU).
 
 ---
 
-## Rodando seu primeiro modelo {.center}
+## Conversando com o modelo {.center}
+
+💬 Clique no modelo baixado no app e comece a conversar — como em um chat:
+
+> "Explique o conceito de arquivo histórico em 3 linhas."  
+> "Resuma este texto: [cole o texto aqui]"  
+> "Quais as principais causas da Independência do Brasil?"
+
+💡 A interface é semelhante à do ChatGPT — mas tudo roda **no seu computador**.
+
+---
+
+## Ollama pelo terminal (opcional) {.center}
+
+⌨️ Se você gosta de terminal, também pode usar:
 
 ```bash
+# Iniciar conversa interativa
 ollama run phi3:mini
+
+# Prompt direto (sem entrar no modo interativo)
+ollama run phi3:mini "Resuma em 2 linhas: democracia participativa"
+
+# Listar modelos instalados
+ollama list
 ```
 
-Depois basta digitar um prompt:
-
-```
-Explique o conceito de "arquivo histórico" em 3 linhas.
-```
-
-Para sair: `/bye`
-
----
-
-## Usando o Ollama com prompts diretos {.center}
-
-```bash
-ollama run phi3:mini "Resuma este conceito em 2 linhas: democracia participativa"
-```
-
-💡 Você pode passar o prompt diretamente sem entrar no modo interativo.
+Para sair do modo interativo: digite `/bye`
 
 ---
 
 ## Modelfile: criando seu assistente personalizado {.center}
 
-Um **Modelfile** é um arquivo de configuração que permite:
+Um **Modelfile** é um arquivo de texto que permite:
 
 - Definir **instruções permanentes** (persona, estilo, tom)  
 - Ajustar **parâmetros** (temperatura, tamanho do contexto)  
 - Criar uma **versão local sob medida** para suas necessidades
 
+> 💡 Pense no Modelfile como um "system prompt permanente" — você define uma vez e o modelo sempre segue.
+
 ---
 
 ### 📝 Exemplo de `Modelfile` {.center}
 
-```bash
+Crie um arquivo de texto chamado `Modelfile` com o conteúdo:
+
+```
 FROM phi3:mini
 
-# Instruções que o modelo seguirá sempre
 SYSTEM """
-Você é um assistente especializado em resumo, síntese e análise de textos,
+Você é um assistente especializado em resumo de textos,
 com foco em Humanidades e Ciências Sociais.
 
 REGRAS:
 - Responda SEMPRE em português do Brasil.
 - Seja direto, claro e objetivo.
 - Não inventar informações.
-- Se o texto estiver confuso, reorganize com coerência.
 """
 
-# Configurações básicas
 PARAMETER temperature 0.2
-PARAMETER num_ctx 8000
 ```
 
 ---
 
-## Como construir e usar um Modelfile {.center}
+## Como usar o Modelfile {.center}
+
+No terminal, crie e rode o modelo personalizado:
 
 ```bash
-# Criar o modelo personalizado
 ollama create assistente -f Modelfile
-
-# Rodar o modelo
 ollama run assistente
 ```
+
+Ou use pelo app: o modelo "assistente" aparece na lista após a criação.
 
 📌 *Resultado:* uma **versão local e personalizada** do modelo — ideal para pesquisa e ensino.
 
 ---
 
-## Usando via API (Python) {.center}
-
-```python
-import requests
-
-r = requests.post(
-  "http://localhost:11434/api/generate",
-  json={
-    "model": "phi3:mini",
-    "prompt": "Explique RAG em 3 linhas."
-  }
-)
-
-print(r.json()["response"])
-```
-
----
-
-## Usando com script Python e arquivo .txt {.center}
-
-📋 O repositório inclui um script didático:
-
-- `ollama_python/read_doc.py`  
-- Recebe um arquivo `.txt` + um prompt  
-- Envia ao modelo local e retorna a resposta
-
-```bash
-python read_doc.py
-```
-
----
-
 ## Onde ficam os modelos? {.center}
 
-```bash
-~/.ollama/models
-```
+Os modelos baixados ficam no seu computador:
 
-No Windows:
+- 🐧 **Linux**: `~/.ollama/models`  
+- 🪟 **Windows**: `%USERPROFILE%\.ollama\models`  
+- 🍎 **macOS**: `~/.ollama/models`
 
-```bash
-%USERPROFILE%\.ollama\models
-```
+💡 Eles ocupam espaço em disco. Modelos leves como `phi3:mini` usam ~2 GB.
 
 ---
 

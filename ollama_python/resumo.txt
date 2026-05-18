@@ -1,7 +1,0 @@
-# Dados de exemplo para o script read_doc.py
-
-O conceito de democracia participativa surgiu como resposta às limitações da democracia representativa. Enquanto a democracia representativa se baseia na delegação de poder a representantes eleitos, a democracia participativa propõe a inclusão direta dos cidadãos nas decisões que afetam suas vidas.
-
-Pateman (1970) argumenta que a participação não é apenas um meio para tomar decisões, mas um processo educativo que desenvolve a capacidade política dos indivíduos. Nessa perspectiva, a participação efetiva transforma a relação entre Estado e sociedade.
-
-No contexto brasileiro, os conselhos gestores de políticas públicas e os orçamentos participativos são exemplos concretos de mecanismos de democracia participativa implementados a partir da Constituição de 1988.

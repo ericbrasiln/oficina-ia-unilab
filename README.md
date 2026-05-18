@@ -50,10 +50,6 @@ oficina-ia-unilab/
 │   └── privacy.png
 ├── ollama_modelfile/
 │   └── Modelfile              # Exemplo de Modelfile (assistente de resumo)
-├── ollama_python/
-│   ├── read_doc.py            # Script Python para interagir com Ollama via API
-│   ├── resumo.txt             # Arquivo de exemplo para teste
-│   └── README.md              # Instruções do script
 ├── CITATION.cff              # Metadados para citação
 ├── LICENSE.md                # Licença CC BY-NC-SA 4.0
 └── README.md                 # Este arquivo
