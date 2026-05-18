@@ -23,27 +23,22 @@ toc: false
 
 ## {.center}
 
-🧠 **IA Generativa na Vida Universitária**
-Pesquisa, Estudo e Escrita com Chatbots e Modelos Locais
-
-Prof. Eric Brasil | UNILAB • PPGIHD/UFRRJ • LABHDUFBA
-
-19 de maio de 2026
-
 ![Acesse a oficina online](imgs/qrcode.png){width=120px}
 
 ---
 
 ## Nota sobre o uso de IA Generativa {.center}
 
-🛠️ Em conformidade com a **Portaria CNPq 2.664/2026** (Art. 9º, I, alínea *c*), declaramos o uso de IAG nesta apresentação:
-
 - **Ferramenta**: Hermes Agent (agente de IA pessoal, código aberto)
 - **Modelos utilizados**: GLM-5.1 (Qwen/ollama-cloud), DeepSeek V4 Pro, GPT-5.5 (OpenAI)
 - **Fases**: concepção, redação dos slides, formatação Quarto/revealjs, geração do QR code
 - **Finalidade**: assistência na estruturação, redação e formatação do material
 
-✍️ Todo o conteúdo, análise, escolhas editoriais, metodológicas e pedagógicas são de **responsabilidade exclusiva** do prof. Eric Brasil.
+---
+
+## Nota sobre o uso de IA Generativa {.center}
+
+- Todo o conteúdo, análise, escolhas editoriais, metodológicas e pedagógicas são de **responsabilidade exclusiva** do prof. Eric Brasil.
 
 ---
 
@@ -472,6 +467,10 @@ Exemplo:
 - **Graves**: autoplágio; informação inconsistente no Lattes com efeito na avaliação (suspensão de bolsas, impedimento em editais)  
 - **Gravíssimas**: fabricação/falsificação de dados, **plágio**, comercialização de autoria, condutas discriminatórias (revogação de fomento, devolução de recursos)
 
+---
+
+## {.center}
+
 📌 Plágio — inclusive via IAG — é infração **gravíssima**.
 
 ---
@@ -486,17 +485,25 @@ Exemplo:
 | 🔸 **Média (0.5–0.7)** | Equilíbrio entre coerência e criatividade |
 | 🔺 **Alta (0.8–1.0+)** | Respostas criativas, porém menos estáveis |
 
+---
+
+## {.center}
+
 💡 Nos chatbots web, a temperatura vem pré-definida. Na API ou no Ollama, você controla.
 
 ---
 
 ## Modelos chamando ferramentas: rumo aos agentes {.center}
 
-🔧 LLMs estão evoluindo de **geradores de texto** para **agentes que agem**:
+🔧 LLMs estão evoluindo de **geradores de texto** para **agentes que tomam decisões**:
 
 - Modelos agora podem **chamar ferramentas**: buscar na web, ler arquivos, executar código, acessar APIs
 - Exemplos: **Codex CLI** (OpenAI), **Claude Code** (Anthropic), **OpenCode** (Ollama local), **Hermes Agent**
 - Isso se desdobra em **agentes de IA**: sistemas autônomos que planejam e executam tarefas multi-etapas
+
+---
+
+## Modelos chamando ferramentas: rumo aos agentes {.center}
 
 > 💡 O horizonte é promissor, mas **não cabe nesta oficina** explorar em detalhes — fica como convite para estudo futuro.
 
@@ -507,8 +514,6 @@ Exemplo:
 ---
 
 ## Modelos abertos vs fechados: por que rodar localmente? {.center}
-
-🔓 **Rodar localmente significa:**
 
 - 🔒 **Privacidade**: ninguém vê seus prompts ou documentos  
 - ⚖️ **Autonomia**: você controla o modelo e os parâmetros  
@@ -545,8 +550,6 @@ Exemplo:
 - 🍎 **macOS**: [ollama.com/download/mac](https://ollama.com/download/mac)  
 - 🐧 **Linux**: siga as instruções em [ollama.com/download/linux](https://ollama.com/download/linux)
 
-💡 A instalação é simples: baixe, execute e siga os passos na tela.
-
 ---
 
 ## Aplicativo Ollama {.center}
@@ -567,13 +570,19 @@ Exemplo:
 - `gemma3:4b` — bom equilíbrio entre qualidade e velocidade  
 - `qwen3:0.6b` — ultra-leve, ideal para testes
 
-💡 Ou baixe pelo terminal, se preferir:
+---
+
+## 💡 Ou baixe pelo terminal, se preferir {.center}
 
 ```bash
 ollama pull phi3:mini
 ollama pull gemma3:4b
 ollama pull qwen3:0.6b
 ```
+
+---
+
+## {.center}
 
 📌 Prefira modelos **small/mini** em PCs sem placa de vídeo dedicada (GPU).
 
@@ -587,7 +596,8 @@ ollama pull qwen3:0.6b
 > "Resuma este texto: [cole o texto aqui]"  
 > "Quais as principais causas da Independência do Brasil?"
 
-💡 A interface é semelhante à do ChatGPT — mas tudo roda **no seu computador**.
+
+## 💡 A interface é semelhante à do ChatGPT — mas tudo roda **no seu computador**. {.center}
 
 ---
 
@@ -618,7 +628,7 @@ Um **Modelfile** é um arquivo de texto que permite:
 - Ajustar **parâmetros** (temperatura, tamanho do contexto)  
 - Criar uma **versão local sob medida** para suas necessidades
 
-> 💡 Pense no Modelfile como um "system prompt permanente" — você define uma vez e o modelo sempre segue.
+## 💡 Pense no Modelfile como um "system prompt permanente" — você define uma vez e o modelo sempre segue. {.center}
 
 ---
 
