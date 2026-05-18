@@ -383,6 +383,51 @@ Exemplo:
 
 ---
 
+## Portaria CNPq 2.664/2026: IA Generativa e Integridade {.center}
+
+📜 **[Portaria CNPq nº 2.664, de 6 de março de 2026](http://memoria2.cnpq.br/web/guest/view/-/journal_content/56_INSTANCE_0oED/10157/23142775?COMPANY_ID=10132)** — Política de Integridade na Atividade Científica do CNPq
+
+📌 **Art. 9º, inciso I** — Diretrizes de integridade na pesquisa:
+
+> **c)** declarar o uso de ferramentas de Inteligência Artificial Generativa (IAG), de qualquer espécie e em qualquer fase da pesquisa (concepção, redação, análise de dados, submissão), especificando a ferramenta utilizada e a finalidade;
+
+---
+
+## Portaria CNPq 2.664/2026: vedações {.center}
+
+⚠️ O que a portaria **veda**:
+
+> **d)** é vedada a submissão de conteúdo gerado por IAG como se fosse de autoria humana, sendo os autores integralmente responsáveis pelo conteúdo final, inclusive por eventuais plágios ou imprecisões geradas pela IAG;
+
+> **e)** é vedada a inserção de projetos de pesquisa de terceiros em ferramentas de IAG para elaboração de pareceres científicos;
+
+> **f)** responsabilizar-se integralmente pelo conteúdo final da pesquisa, inclusive por eventuais plágios ou imprecisões geradas pela IAG.
+
+---
+
+## Portaria CNPq: o que muda na prática? {.center}
+
+✅ **Declarar** sempre que usar IAG — em qualquer fase da pesquisa  
+❌ **Nunca** submeter texto gerado por IA como se fosse seu  
+❌ **Nunca** inserir projetos de terceiros em IAG para gerar pareceres  
+✅ **Responsabilidade total** do autor sobre o conteúdo final
+
+> 💡 Se a IA alucinou uma citação e você incluiu no texto — **a responsabilidade é sua.**
+
+---
+
+## Infrações e sanções {.center}
+
+⚖️ A portaria classifica infrações por gravidade:
+
+- **Leves**: sem dolo, sem prejuízo (advertência)  
+- **Graves**: autoplágio; informação inconsistente no Lattes com efeito na avaliação (suspensão de bolsas, impedimento em editais)  
+- **Gravíssimas**: fabricação/falsificação de dados, **plágio**, comercialização de autoria, condutas discriminatórias (revogação de fomento, devolução de recursos)
+
+📌 Plágio — inclusive via IAG — é infração **gravíssima**.
+
+---
+
 ## Temperatura e criatividade {.center}
 
 🌡️ **Temperatura** = parâmetro que controla a aleatoriedade da resposta
