@@ -6,8 +6,8 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.26">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Eric Brasil">
   <title>IA Generativa na Vida Universitária</title>
@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -95,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-99eeafcedac04850354b682963cedae3.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-2abc1c5b7b5c7eecd6137558e106e4c3.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -572,6 +575,34 @@ Demo prática + Modelfile.</li>
 <li><strong>Itere</strong> — refine a resposta com follow-ups</li>
 </ol>
 </section>
+<section id="boas-práticas-projetos-e-instruções-personalizadas" class="slide level2 center">
+<h2>Boas práticas: projetos e instruções personalizadas</h2>
+<p>🗂️ Os chatbots permitem criar <strong>projetos</strong> e definir <strong>instruções permanentes</strong> — use!</p>
+<ul>
+<li><strong><a href="https://chatgpt.com">ChatGPT</a></strong>: <em>Projects</em> → organize conversas por projeto + <em>Custom Instructions</em> em Settings</li>
+<li><strong><a href="https://claude.ai">Claude</a></strong>: <em>Projects</em> → adicione documentos de contexto + instruções do projeto</li>
+<li><strong><a href="https://gemini.google.com">Gemini</a></strong>: <em>Gems</em> → crie personas com instruções salvas</li>
+</ul>
+<blockquote>
+<p>💡 Defina sua área, idioma e estilo uma vez — o modelo já começa cada conversa com esse contexto.</p>
+</blockquote>
+</section>
+<section id="notebooklm-ia-com-seus-documentos" class="slide level2 center">
+<h2>NotebookLM: IA com seus documentos</h2>
+<p>📓 <strong><a href="https://notebooklm.google.com">NotebookLM</a></strong> — ferramenta gratuita do Google que combina LLM com <strong>seus documentos</strong>:</p>
+<ul>
+<li>Faça upload de PDFs, artigos, sites, vídeos do YouTube<br>
+</li>
+<li>O modelo responde <strong>com base apenas nos seus fontes</strong> — menos alucinação<br>
+</li>
+<li>Gera resumos, fichamentos, mapas conceptuais e podcasts automatisch<br>
+</li>
+<li>Ideal para <strong>fichamento, revisão de literatura e estudo dirigido</strong></li>
+</ul>
+<blockquote>
+<p>⚠️ Dados enviados ao Google — não use documentos sensíveis.</p>
+</blockquote>
+</section>
 <section id="usos-na-pesquisa" class="slide level2 center">
 <h2>Usos na pesquisa</h2>
 <p>🔬 Como chatbots podem ajudar:</p>
@@ -917,8 +948,15 @@ PARAMETER num_ctx 4096</code></pre>
 <section id="como-usar-o-modelfile" class="slide level2 center">
 <h2>Como usar o Modelfile</h2>
 <p>No terminal, crie e rode o modelo personalizado:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="ex">ollama</span> create assistente <span class="at">-f</span> Modelfile</span>
-<span id="cb4-2"><a href=""></a><span class="ex">ollama</span> run assistente</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="co"># 1. Salve o arquivo Modelfile em qualquer pasta do seu computador</span></span>
+<span id="cb4-2"><a href=""></a><span class="co">#    Exemplo: ~/documentos/fichamento/Modelfile</span></span>
+<span id="cb4-3"><a href=""></a></span>
+<span id="cb4-4"><a href=""></a><span class="co"># 2. No terminal, navegue até a pasta e crie o modelo</span></span>
+<span id="cb4-5"><a href=""></a><span class="bu">cd</span> ~/documentos/fichamento</span>
+<span id="cb4-6"><a href=""></a><span class="ex">ollama</span> create assistente <span class="at">-f</span> Modelfile</span>
+<span id="cb4-7"><a href=""></a></span>
+<span id="cb4-8"><a href=""></a><span class="co"># 3. Rode o modelo</span></span>
+<span id="cb4-9"><a href=""></a><span class="ex">ollama</span> run assistente</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Ou use pelo app: o modelo “assistente” aparece na lista após a criação.</p>
 <p>📌 <em>Resultado:</em> uma <strong>versão local e personalizada</strong> do modelo — ideal para pesquisa e ensino.</p>
 </section>
