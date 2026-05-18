@@ -17,7 +17,7 @@ author:
   - name: Eric Brasil
     orcid: 0000-0001-5067-8475
     affiliation: (UNILAB • PPGIHD/UFRRJ • LABHDUFBA)
-description: "Oficina prática sobre IA generativa no contexto universitário: fundamentos, melhores práticas com chatbots web e demonstração de modelos locais com Ollama."
+description: "Oficina sobre IA generativa no contexto universitário: fundamentos, melhores práticas com chatbots web e horizontes de uso avançado."
 toc: false
 ---
 
@@ -49,14 +49,13 @@ toc: false
 
 ::: {.column width="46%"}
 - Compreender o que é IA generativa e como funciona.  
-- Aprender a usar chatbots web de forma crítica na vida universitária.
-
+- Usar chatbots web de forma **crítica e produtiva** na vida acadêmica.
 :::
 
 ::: {.column width="8%"}
 :::
 ::: {.column width="46%"}
-- Conhecer modelos abertos e rodá-los localmente com Ollama.  
+- Conhecer o **horizonte de possibilidades avançadas**: modelos locais, agentes, RAG.  
 - Refletir sobre ética, vieses e limitações da IA generativa.
 :::
 
@@ -77,8 +76,8 @@ toc: false
 :::
 
 ::: {.column width="30%"}
-2. **Melhores práticas com chatbots web**  ~45min  
-   Pesquisa, estudo, escrita.
+2. **Chatbots na prática acadêmica**  ~50min  
+   Pesquisa, estudo, escrita, projetos.
 
 :::
 
@@ -86,8 +85,8 @@ toc: false
 :::
 
 ::: {.column width="30%"}
-3. **Modelos locais com Ollama**  ~30min  
-   Demo prática + Modelfile.
+3. **Horizontes avançados**  ~20min  
+   Ollama, agentes, RAG.
 :::
 
 ---
@@ -280,7 +279,6 @@ Resultado:
 
 ## Modelos Fechados vs Abertos {.center}
 
-
 **🔓 Modelos Abertos**
 
 - Código e pesos acessíveis e personalizáveis  
@@ -291,7 +289,7 @@ Resultado:
 
 ---
 
-## 2. Melhores práticas com chatbots web {.center}
+## 2. Chatbots na prática acadêmica {.center}
 
 ---
 
@@ -360,13 +358,19 @@ Resultado:
 - **Exploração de conceitos**: "Explique o conceito de X como se eu tivesse 15 anos"  
 - **Revisão de literatura**: "Quais são as principais correntes teóricas sobre X?"  
 - **Organização de ideias**: "Me ajude a estruturar um projeto sobre X"  
-- **Tradução**: Traduzir resumos, abstracts, e-mails acadêmicos
+- **Tradução**: traduzir resumos, abstracts, e-mails acadêmicos
 
 ---
 
-## {.center}
+## Usos na pesquisa: exemplos de prompts {.center}
 
-⚠️ **Sempre verifique**: fontes, citações e dados gerados pela IA.
+📌 **Exploração conceitual:**
+
+> "Sou estudante de História e preciso entender o conceito de 'história dos conceitos' de Reinhart Koselleck. Explique em termos simples e depois dê um exemplo de aplicação."
+
+📌 **Revisão de literatura:**
+
+> "Liste as 5 principais abordagens teóricas sobre a Revolução Francesa, com 1 parágrafo cada. Para cada uma, indique um autor representativo e uma obra de referência."
 
 ---
 
@@ -381,6 +385,18 @@ Resultado:
 
 ---
 
+## Usos no estudo: exemplos de prompts {.center}
+
+📌 **Fichamento:**
+
+> "Aqui está um artigo de 10 páginas sobre X [cole o texto]. Produza um fichamento com: referência completa, tema central, argumento principal, 3 conceitos-chave, 2 citações relevantes com página."
+
+📌 **Questões de estudo:**
+
+> "Gere 8 questões de múltipla escolha sobre o capítulo 3 do texto abaixo, com 4 alternativas cada. Marque a resposta correta."
+
+---
+
 ## Usos na escrita acadêmica {.center}
 
 ✍️ Como chatbots podem ajudar:
@@ -389,6 +405,24 @@ Resultado:
 - **Revisão**: identificar problemas de clareza, coesão, gramática  
 - **Tradução**: versões em outros idiomas para publicação  
 - **Formatação**: ajustar citações, referências
+
+---
+
+## Usos na escrita: exemplos de prompts {.center}
+
+📌 **Revisão:**
+
+> "Revise este parágrafo quanto a clareza, coerência e gramática. Aponte os problemas e sugira reescritas. Não reescreva o texto todo — apenas indique o que melhorar e como."
+
+📌 **Planejamento:**
+
+> "Preciso escrever um artigo de 20 páginas sobre X. Proponha uma estrutura com seções, subseções e estimativa de páginas por seção. Considere o formato IMRAD."
+
+---
+
+## {.center}
+
+⚠️ **Sempre verifique**: fontes, citações e dados gerados pela IA.
 
 ---
 
@@ -500,166 +534,39 @@ Exemplo:
 
 ---
 
-## Temperatura e criatividade {.center}
-
-🌡️ **Temperatura** = parâmetro que controla a aleatoriedade da resposta
-
-| Valor | Efeito |
-|:------|:-------|
-| 🔹 **Baixa (0.1–0.3)** | Respostas previsíveis e consistentes |
-| 🔸 **Média (0.5–0.7)** | Equilíbrio entre coerência e criatividade |
-| 🔺 **Alta (0.8–1.0+)** | Respostas criativas, porém menos estáveis |
+## 3. Horizontes avançados {.center}
 
 ---
 
-## {.center}
+## Modelos abertos vs fechados: por que importa? {.center}
 
-💡 Nos chatbots web, a temperatura vem pré-definida. Na API ou no Ollama, você controla.
+🔓 **Modelos abertos** são mais do que código gratuito:
 
----
+- **Privacidade**: ninguém vê seus prompts ou documentos  
+- **Autonomia**: você controla o modelo e os parâmetros  
+- **Reprodutibilidade**: mesma versão, mesmo resultado  
+- **Personalização**: crie personas e instruções permanentes
 
-## Modelos chamando ferramentas: rumo aos agentes {.center}
-
-🔧 LLMs estão evoluindo de **geradores de texto** para **agentes que tomam decisões**:
-
-- Modelos agora podem **chamar ferramentas**: buscar na web, ler arquivos, executar código, acessar APIs
-- Exemplos: **Codex CLI** (OpenAI), **Claude Code** (Anthropic), **OpenCode** (Ollama local), **Hermes Agent**
-- Isso se desdobra em **agentes de IA**: sistemas autônomos que planejam e executam tarefas multi-etapas
+> 💡 Essas vantagens são decisivas em contextos acadêmicos — especialmente com dados sensíveis.
 
 ---
 
-## Modelos chamando ferramentas: rumo aos agentes {.center}
+## Ollama: IA no seu computador {.center}
 
-> 💡 O horizonte é promissor, mas **não cabe nesta oficina** explorar em detalhes — fica como convite para estudo futuro.
+🦙 O **[Ollama](https://ollama.com)** permite rodar modelos abertos **localmente**:
 
----
+- Funciona em Linux, Windows e macOS  
+- Baixe modelos como `gemma3:4b` ou `phi3:mini` — sem internet  
+- Use pelo app (interface gráfica) ou pelo terminal  
+- Crie **Modelfiles** com instruções permanentes personalizadas
 
-## 3. Modelos locais com Ollama {.center}
-
----
-
-## Modelos abertos vs fechados: por que rodar localmente? {.center}
-
-- 🔒 **Privacidade**: ninguém vê seus prompts ou documentos  
-- ⚖️ **Autonomia**: você controla o modelo e os parâmetros  
-- 🧪 **Reprodutibilidade**: sempre a mesma versão, mesmo resultado  
-- 🪶 **Modelos leves**: funcionam em laptops sem GPU  
-- 💰 **Sem custos por uso**: depois de baixar, é grátis
+> 💡 É como ter um ChatGPT privado no seu computador — ninguém vê seus textos.
 
 ---
 
-## O que é o Ollama? {.columns}
+## Modelfile: seu assistente sob medida {.center}
 
-::: {.column width="65%"}
-- Plataforma para **rodar LLMs localmente**  
-- Suporte a modelos **abertos**  
-- Funciona em **Linux**, **Windows** e **macOS**  
-- Usa **Modelfile** para personalizar o modelo  
-- Fácil de instalar e usar
-:::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="30%"}
-![](https://ollama.com/public/ollama.png)
-:::
-
----
-
-## Instalação do Ollama {.center}
-
-📌 **Passo 1:** Baixe e instale o Ollama no seu computador
-
-- 🪟 **Windows**: [ollama.com/download/windows](https://ollama.com/download/windows)  
-- 🍎 **macOS**: [ollama.com/download/mac](https://ollama.com/download/mac)  
-- 🐧 **Linux**: siga as instruções em [ollama.com/download/linux](https://ollama.com/download/linux)
-
----
-
-## Aplicativo Ollama {.center}
-
-🖥️ Depois de instalar, abra o **aplicativo Ollama** no seu computador:
-
-- Ele fica rodando em **segundo plano** (ícone na bandeja do sistema)  
-- Não precisa usar o terminal — tudo pode ser feito pelo app  
-- O app mostra os **modelos disponíveis** e permite baixar e conversar
-
----
-
-## Baixando modelos pelo app {.center}
-
-📦 No aplicativo Ollama, clique em **"Models"** e busque:
-
-- `phi3:mini` — leve, rápido, bom para textos curtos  
-- `gemma3:4b` — bom equilíbrio entre qualidade e velocidade  
-- `qwen3:0.6b` — ultra-leve, ideal para testes
-
----
-
-## 💡 Ou baixe pelo terminal, se preferir {.center}
-
-```bash
-ollama pull phi3:mini
-ollama pull gemma3:4b
-ollama pull qwen3:0.6b
-```
-
----
-
-## {.center}
-
-📌 Prefira modelos **small/mini** em PCs sem placa de vídeo dedicada (GPU).
-
----
-
-## Conversando com o modelo {.center}
-
-💬 Clique no modelo baixado no app e comece a conversar — como em um chat:
-
-> "Explique o conceito de arquivo histórico em 3 linhas."  
-> "Resuma este texto: [cole o texto aqui]"  
-> "Quais as principais causas da Independência do Brasil?"
-
-
-## 💡 A interface é semelhante à do ChatGPT — mas tudo roda **no seu computador**. {.center}
-
----
-
-## Ollama pelo terminal (opcional) {.center}
-
-⌨️ Se você gosta de terminal, também pode usar:
-
-```bash
-# Iniciar conversa interativa
-ollama run phi3:mini
-
-# Prompt direto (sem entrar no modo interativo)
-ollama run phi3:mini "Resuma em 2 linhas: democracia participativa"
-
-# Listar modelos instalados
-ollama list
-```
-
-Para sair do modo interativo: digite `/bye`
-
----
-
-## Modelfile: criando seu assistente personalizado {.center}
-
-Um **Modelfile** é um arquivo de texto que permite:
-
-- Definir **instruções permanentes** (persona, estilo, tom)  
-- Ajustar **parâmetros** (temperatura, tamanho do contexto)  
-- Criar uma **versão local sob medida** para suas necessidades
-
-## 💡 Pense no Modelfile como um "system prompt permanente" — você define uma vez e o modelo sempre segue. {.center}
-
----
-
-### 📝 Exemplo de `Modelfile`: assistente de fichamento {.center}
-
-Crie um arquivo de texto chamado `Modelfile` com o conteúdo:
+Um **Modelfile** define instruções permanentes para o modelo — um "system prompt" que nunca se perde:
 
 ```
 FROM gemma3:4b
@@ -679,7 +586,6 @@ INSTRUÇÕES:
   5. CITAÇÕES RELEVANTES (até 3, com página)
   6. NOTAS CRÍTICAS: pontos fortes, lacunas,
      diálogo com outras obras
-- Seja direto, claro e objetivo.
 - NÃO invente informações nem citações.
 - Se faltar informação, indique [não informado].
 """
@@ -690,61 +596,68 @@ PARAMETER num_ctx 4096
 
 ---
 
-## Como usar o Modelfile {.center}
-
-No terminal, crie e rode o modelo personalizado:
+## Usando o Modelfile {.center}
 
 ```bash
-# 1. Salve o arquivo Modelfile em qualquer pasta do seu computador
-#    Exemplo: ~/documentos/fichamento/Modelfile
+# Salve o arquivo Modelfile em qualquer pasta
+# Exemplo: ~/documentos/fichamento/Modelfile
 
-# 2. No terminal, navegue até a pasta e crie o modelo
 cd ~/documentos/fichamento
 ollama create assistente -f Modelfile
-
-# 3. Rode o modelo
 ollama run assistente
 ```
 
-Ou use pelo app: o modelo "assistente" aparece na lista após a criação.
-
-📌 *Resultado:* uma **versão local e personalizada** do modelo — ideal para pesquisa e ensino.
+📌 Resultado: uma **versão local e personalizada** do modelo — ideal para fichamento, resumo e pesquisa.
 
 ---
 
-## Onde ficam os modelos? {.center}
+## RAG: Geração Aumentada por Recuperação {.center}
 
-Os modelos baixados ficam no seu computador:
+📚 **RAG** (*Retrieval-Augmented Generation*) combina LLM com **busca em documentos**:
 
-- 🐧 **Linux**: `~/.ollama/models`  
-- 🪟 **Windows**: `%USERPROFILE%\.ollama\models`  
-- 🍎 **macOS**: `~/.ollama/models`
+- O modelo **recupera trechos relevantes** de uma base de documentos  
+- Gera a resposta **com base nas fontes recuperadas** — não apenas no treinamento  
+- Reduz alucinações e permite **citar fontes**
 
-💡 Eles ocupam espaço em disco. Modelos leves como `phi3:mini` usam ~2 GB.
-
----
-
-## Vantagens dos modelos locais {.center}
-
-✅ **Privacidade total**: seus textos não saem do computador  
-✅ **Sem custo por uso**: depois de baixar, é gratuito  
-✅ **Reprodutibilidade**: mesma versão, mesmo resultado  
-✅ **Autonomia**: você decide o modelo, os parâmetros, o estilo  
-✅ **Sem internet**: funciona offline (depois de baixar)  
-✅ **Aprendizado**: entender melhor como LLMs funcionam
+> 💡 É como o NotebookLM, mas com controle total: você define a base, o modelo e o acesso.
 
 ---
 
-## Limitações dos modelos locais {.center}
+## RAG na prática {.center}
 
-⚠️ Modelos pequenos (que cabem em laptop):
+🔧 Como funciona um sistema RAG:
 
-- Respostas menos sofisticadas que GPT-5 ou Claude  
-- Mais propensos a alucinações  
-- Janela de contexto menor (menos texto de uma vez)  
-- Sem acesso à internet para busca
+1. Você carrega seus documentos (PDFs, artigos, relatórios)  
+2. Os documentos são **indexados** e transformados em vetores  
+3. Quando você faz uma pergunta, o sistema busca os trechos mais relevantes  
+4. O LLM gera a resposta **apoiado nos seus documentos**
 
-💡 **Use o modelo certo para cada tarefa.**
+📌 Ferramentas: [LlamaIndex](https://www.llamaindex.ai/), [LangChain](https://www.langchain.com/), [AnythingLLM](https://anythingllm.com/), [PrivateGPT](https://privategpt.io/)
+
+> ⚠️ RAG não elimina alucinação — mas **reduz significativamente** quando o documento está na base.
+
+---
+
+## Codex e agentes de IA {.center}
+
+🔧 LLMs estão evoluindo de **geradores de texto** para **agentes que agem**:
+
+- Modelos agora podem **chamar ferramentas**: buscar na web, ler arquivos, executar código, acessar APIs
+- Exemplos: **Codex CLI** (OpenAI), **Claude Code** (Anthropic), **OpenCode** (Ollama local), **Hermes Agent**
+- Isso se desdobra em **agentes de IA**: sistemas autônomos que planejam e executam tarefas multi-etapas
+
+---
+
+## Codex e agentes de IA {.center}
+
+🔬 **Por que importa para a pesquisa?**
+
+- Agentes podem **automatizar revisões de literatura** em bases de dados
+- Podem **analisar corpora inteiros**, cruzar fontes, identificar padrões  
+- Executam tarefas repetitivas (limpeza de dados, formatação, transcrição)  
+- **Privacidade**: com modelos locais + agentes, seus dados nunca saem do computador
+
+> 💡 O horizonte é promissor, mas ainda está em consolidação — **fica como convite para estudo futuro**.
 
 ---
 
@@ -753,21 +666,22 @@ Os modelos baixados ficam no seu computador:
 🎯 **Balanço da oficina:**
 
 - IA generativa é uma **ferramenta poderosa**, mas com **limitações reais**  
-- Chatbots web são ótimos para exploração e revisão — **use com crítica**  
-- Modelos locais oferecem **privacidade e autonomia** — experimente!
+- Chatbots web são ótimos para exploração, estudo e revisão — **use com crítica e declarando o uso**  
+- O horizonte avançado (Ollama, RAG, agentes) amplia possibilidades de **privacidade e autonomia**
 
 ---
 
-## Quando usar cada um? {.center}
+## Quando usar cada ferramenta? {.center}
 
 | Situação | Recomendação |
 |:---------|:-------------|
 | Exploração de ideias, brainstorming | Chatbot web |
+| Fichamento e resumo de textos | NotebookLM ou chatbot web |
 | Revisão gramatical, tradução | Chatbot web |
-| Análise de documentos sensíveis | Modelo local |
-| Reprodutibilidade em pesquisa | Modelo local |
-| Sem internet | Modelo local |
-| Tarefas que exigem qualidade alta | Chatbot web + verificação |
+| Análise de documentos sensíveis | Modelo local (Ollama) |
+| Reprodutibilidade em pesquisa | Modelo local (Ollama) ou RAG |
+| Sem internet | Modelo local (Ollama) |
+| Pesquisa avançada em corpora | RAG + modelo local |
 
 ---
 
@@ -786,6 +700,7 @@ Os modelos baixados ficam no seu computador:
 📚 **Para saber mais:**
 
 - [Documentação do Ollama](https://ollama.com)  
+- [NotebookLM](https://notebooklm.google.com)  
 - [Repositório da oficina](https://github.com/ericbrasiln/oficina-ia-unilab)  
 - [2shdufba — oficina anterior](https://github.com/ericbrasiln/2shdufba)
 
