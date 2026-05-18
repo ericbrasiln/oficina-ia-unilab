@@ -328,6 +328,31 @@ Resultado:
 
 ---
 
+## Boas práticas: projetos e instruções personalizadas {.center}
+
+🗂️ Os chatbots permitem criar **projetos** e definir **instruções permanentes** — use!
+
+- **[ChatGPT](https://chatgpt.com)**: *Projects* → organize conversas por projeto + *Custom Instructions* em Settings
+- **[Claude](https://claude.ai)**: *Projects* → adicione documentos de contexto + instruções do projeto
+- **[Gemini](https://gemini.google.com)**: *Gems* → crie personas com instruções salvas
+
+> 💡 Defina sua área, idioma e estilo uma vez — o modelo já começa cada conversa com esse contexto.
+
+---
+
+## NotebookLM: IA com seus documentos {.center}
+
+📓 **[NotebookLM](https://notebooklm.google.com)** — ferramenta gratuita do Google que combina LLM com **seus documentos**:
+
+- Faça upload de PDFs, artigos, sites, vídeos do YouTube  
+- O modelo responde **com base apenas nos seus fontes** — menos alucinação  
+- Gera resumos, fichamentos, mapas conceptuais e podcasts automatisch  
+- Ideal para **fichamento, revisão de literatura e estudo dirigido**
+
+> ⚠️ Dados enviados ao Google — não use documentos sensíveis.
+
+---
+
 ## Usos na pesquisa {.center}
 
 🔬 Como chatbots podem ajudar:
@@ -670,7 +695,14 @@ PARAMETER num_ctx 4096
 No terminal, crie e rode o modelo personalizado:
 
 ```bash
+# 1. Salve o arquivo Modelfile em qualquer pasta do seu computador
+#    Exemplo: ~/documentos/fichamento/Modelfile
+
+# 2. No terminal, navegue até a pasta e crie o modelo
+cd ~/documentos/fichamento
 ollama create assistente -f Modelfile
+
+# 3. Rode o modelo
 ollama run assistente
 ```
 
