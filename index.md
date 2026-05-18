@@ -30,13 +30,20 @@ Prof. Eric Brasil | UNILAB • PPGIHD/UFRRJ • LABHDUFBA
 
 19 de maio de 2026
 
+![Acesse a oficina online](imgs/qrcode.png){width=120px}
+
 ---
 
 ## Nota sobre o uso de IA Generativa {.center}
 
-🛠️ Esta apresentação foi **produzida com o apoio de assistentes de IA**, sob curadoria e escolhas editoriais do professor **Eric Brasil**.
+🛠️ Em conformidade com a **Portaria CNPq 2.664/2026** (Art. 9º, I, alínea *c*), declaramos o uso de IAG nesta apresentação:
 
-🤖 Todo o conteúdo, formatação e exemplos práticos foram gerados de forma **colaborativa**, preservando as escolhas **editoriais, metodológicas e pedagógicas** do autor.
+- **Ferramenta**: Hermes Agent (agente de IA pessoal, código aberto)
+- **Modelos utilizados**: GLM-5.1 (Qwen/ollama-cloud), DeepSeek V4 Pro, GPT-5.5 (OpenAI)
+- **Fases**: concepção, redação dos slides, formatação Quarto/revealjs, geração do QR code
+- **Finalidade**: assistência na estruturação, redação e formatação do material
+
+✍️ Todo o conteúdo, análise, escolhas editoriais, metodológicas e pedagógicas são de **responsabilidade exclusiva** do prof. Eric Brasil.
 
 ---
 
@@ -160,7 +167,8 @@ Simplificando:
 
 ## Transformers: a revolução {.center}
 
-📄 Introduzidos por Vaswani et al. (2017): *"Attention is All You Need"*
+📄 Introduzidos por Vaswani et al. (2017): *"Attention is All You Need"*  
+🔗 [arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762)
 
 **Mecanismo de atenção**: o modelo decide quais partes do texto são mais relevantes para gerar a próxima palavra.
 
@@ -482,86 +490,15 @@ Exemplo:
 
 ---
 
-## Codex: IA no terminal {.center}
+## Modelos chamando ferramentas: rumo aos agentes {.center}
 
-💻 **Codex** são interfaces de terminal (TUI) que conectam LLMs ao seu computador — vão além do chatbot web:
+🔧 LLMs estão evoluindo de **geradores de texto** para **agentes que agem**:
 
-- Lêem e escrevem **arquivos locais**  
-- Executam **comandos no terminal**  
-- Operam **direto no seu projeto** — contexto real, não texto colado
+- Modelos agora podem **chamar ferramentas**: buscar na web, ler arquivos, executar código, acessar APIs
+- Exemplos: **Codex CLI** (OpenAI), **Claude Code** (Anthropic), **OpenCode** (Ollama local), **Hermes Agent**
+- Isso se desdobra em **agentes de IA**: sistemas autônomos que planejam e executam tarefas multi-etapas
 
-> 💡 Pense neles como um "assistente de programação e automação" que mora no seu terminal.
-
----
-
-## Codex: principais exemplos {.center}
-
-| Ferramenta | Empresa | Modelo | Código aberto |
-|:-----------|:--------|:-------|:------------:|
-| **Codex CLI** | OpenAI | GPT-5 / o-series | Sim |
-| **Claude Code** | Anthropic | Claude | Não |
-| **OpenCode** | Comunidade | Ollama (local) | Sim |
-
-📋 Cada uma tem abordagem própria, mas o princípio é o mesmo: **IA que atua no seu sistema de arquivos e terminal.**
-
----
-
-## Codex CLI (OpenAI) {.center}
-
-🔑 Roda modelos da OpenAI (GPT-5, o-series) direto no terminal
-
-- Modos: **suggest** (sugere, você aprova), **auto-edit** (edita com aprovação), **full-auto** (autônomo)  
-- Pode ler código, escrever arquivos, rodar comandos  
-- Requer **API Key** da OpenAI (uso pago)
-
-```bash
-codex "Crie um arquivo README.md para este projeto"
-```
-
----
-
-## Claude Code (Anthropic) {.center}
-
-🔑 Roda o modelo Claude no terminal com acesso ao seu projeto
-
-- Entende o código do repositório automaticamente  
-- Pode criar, editar e buscar arquivos  
-- Requer **API Key** da Anthropic (uso pago)  
-- Indicado para projetos de software
-
-```bash
-claude "Explique a função principal deste repositório"
-```
-
----
-
-## OpenCode {.center}
-
-🔓 Roda modelos **locais via Ollama** — sem API Key, sem custo
-
-- Usa modelos que você já baixou: phi3, gemma3, qwen3...  
-- **Privacidade total** — nada sai do computador  
-- Ideal para experimentar codex sem pagar
-
-```bash
-opencode "Revise o estilo deste texto e sugira melhorias"
-```
-
----
-
-## Codex: quando usar? {.center}
-
-📌 **Use codex quando:**
-
-- Precisa que a IA **leia ou altere arquivos** no seu computador  
-- Quer automação de tarefas repetitivas em projetos  
-- Trabalha com **código, dados ou textos** estruturados
-
-⚠️ **Cuidados:**
-
-- APIs pagas — custo por token  
-- Sempre **revise** o que o codex cria ou modifica  
-- Arquivos sensíveis: prefira modelos locais (OpenCode + Ollama)
+> 💡 O horizonte é promissor, mas **não cabe nesta oficina** explorar em detalhes — fica como convite para estudo futuro.
 
 ---
 
@@ -685,24 +622,35 @@ Um **Modelfile** é um arquivo de texto que permite:
 
 ---
 
-### 📝 Exemplo de `Modelfile` {.center}
+### 📝 Exemplo de `Modelfile`: assistente de fichamento {.center}
 
 Crie um arquivo de texto chamado `Modelfile` com o conteúdo:
 
 ```
-FROM phi3:mini
+FROM gemma3:4b
 
 SYSTEM """
-Você é um assistente especializado em resumo de textos,
-com foco em Humanidades e Ciências Sociais.
+Você é um assistente especializado em fichamentos
+acadêmicos para estudantes e pesquisadores de
+Humanidades e Ciências Sociais.
 
-REGRAS:
+INSTRUÇÕES:
 - Responda SEMPRE em português do Brasil.
+- Ao receber um texto, produza um fichamento com:
+  1. REFERÊNCIA completa (autor, título, local, ano)
+  2. TEMA central em 1 frase
+  3. ARGUMENTO PRINCIPAL em até 3 frases
+  4. CONCEITOS-CHAVE (3 a 5 termos)
+  5. CITAÇÕES RELEVANTES (até 3, com página)
+  6. NOTAS CRÍTICAS: pontos fortes, lacunas,
+     diálogo com outras obras
 - Seja direto, claro e objetivo.
-- Não inventar informações.
+- NÃO invente informações nem citações.
+- Se faltar informação, indique [não informado].
 """
 
 PARAMETER temperature 0.2
+PARAMETER num_ctx 4096
 ```
 
 ---
