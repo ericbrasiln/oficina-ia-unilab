@@ -278,8 +278,9 @@ Resultado:
 | **ChatGPT** | OpenAI | Sim (limitado) | Sim |
 | **Gemini** | Google | Sim | Sim |
 | **Copilot** | Microsoft | Sim | Sim |
+| **Claude** | Anthropic | Sim (limitado) | Não |
 
-📌 Todos funcionam com LLMs por trás. As diferenças principais são: modelo, limite de uso gratuito e integração com outros serviços.
+📌 Todos funcionam com LLMs por trás. As diferenças principais são: modelo, limite de uso gratuito, busca na web e integração com outros serviços.
 
 ---
 
