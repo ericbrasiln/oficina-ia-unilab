@@ -1,63 +1,74 @@
-# IA Generativa na Vida Universitária: Pesquisa, Estudo e Escrita com Chatbots e Modelos Locais
+# IA Generativa na Vida Universitária
 
-**Ministrante:** Prof. Eric Brasil (UNILAB • PPGIHD/UFRRJ • LABHDUFBA)  
-**Data:** 19/05/2026 (terça-feira) | **Horário:** 9h30–11h30 | **Local:** a definir pelo núcleo  
-**Público-alvo:** Estudantes de graduação e pós-graduação e docentes da UNILAB
+**Pesquisa, Estudo e Escrita com Chatbots e Modelos Locais**
+
+Ministrante: Prof. Eric Brasil (UNILAB • PPGIHD/UFRRJ • LABHDUFBA)  
+Data: 19/05/2026 (terça-feira) | 9h30–11h30  
+Público-alvo: Estudantes de graduação e pós-graduação e docentes da UNILAB
 
 ---
 
 ## Resumo
 
-Esta oficina apresenta os fundamentos e usos práticos da inteligência artificial generativa — em especial os Large Language Models (LLMs) — no contexto universitário. Serão abordados: o que é IA generativa e como funcionam os chatbots baseados em LLMs; estratégias e melhores práticas para uso de chatbots web (ChatGPT, Gemini, Copilot) na pesquisa, no estudo e na escrita acadêmica; cuidados éticos, vieses e alucinações; e uma demonstração prática de execução de modelos abertos em máquina local com Ollama. A oficina é voltada para estudantes de graduação e pós-graduação e docentes que desejam incorporar essas ferramentas de forma crítica e responsável em suas rotinas acadêmicas.
+Oficina prática sobre inteligência artificial generativa no contexto universitário. Aborda os fundamentos dos LLMs, estratégias de uso de chatbots web (ChatGPT, Claude, Gemini, Copilot) na pesquisa, estudo e escrita acadêmica, cuidados éticos (alucinações, vieses, transparência) e o horizonte de possibilidades avançadas: execução de modelos abertos localmente com Ollama, RAG e agentes de IA. Não requer conhecimento prévio de programação.
 
-## Estrutura da Oficina
+## Estrutura
 
 ### Parte 1 — O que é IA generativa? (~30min)
 
 - IA generativa ≠ IA Geral: distinções essenciais
-- LLMs: o que são, como funcionam (treinamento, transformers, parâmetros)
+- LLMs: o que são, como funcionam (transformers, parâmetros, treinamento)
 - Alucinações, vieses e limitações
 - Custo ambiental e infraestrutural
+- Modelos fechados vs abertos
 
-### Parte 2 — Melhores práticas com chatbots web (~45min)
+### Parte 2 — Chatbots na prática acadêmica (~50min)
 
-- ChatGPT, Gemini, Copilot: semelhanças e diferenças
-- Prompt engineering básico
-- Usos na pesquisa, no estudo e na escrita acadêmica
+- ChatGPT, Claude, Gemini, Copilot: semelhanças e diferenças
+- Prompt engineering: 4 princípios
+- Projetos e instruções personalizadas
+- NotebookLM: IA com seus documentos
+- Usos na pesquisa, no estudo e na escrita acadêmica (com exemplos de prompts)
 - Cuidados éticos: plágio, transparência, limites institucionais
-- Regra prática: a IA auxilia, não substitui o pensamento crítico
+- Portaria CNPq nº 2.664/2026: IA Generativa e integridade científica
 
-### Parte 3 — Modelos locais com Ollama (~30min)
+### Parte 3 — Horizontes avançados (~20min)
 
-- Modelos abertos vs. fechados: por que rodar localmente?
-- Instalação e comandos básicos do Ollama
-- Baixando e rodando modelos leves
-- Criando um Modelfile personalizado
-- Vantagens: privacidade, autonomia, reprodutibilidade
+- Modelos abertos vs fechados: por que importa?
+- Ollama: execução local de modelos abertos
+- Modelfile: assistente personalizado (fichamento acadêmico)
+- RAG: Geração Aumentada por Recuperação
+- Codex e agentes de IA
 
 ### Encerramento — Discussão (~15min)
 
-- Balanço e perguntas
+- Quando usar cada ferramenta
+- Perguntas e troca de experiências
 
 ## Conteúdo do repositório
 
 ```
 oficina-ia-unilab/
-├── index.md                  # Fonte da apresentação (Quarto / Reveal.js)
-├── custom.scss               # Folha de estilos personalizada
-├── imgs/                     # Imagens usadas nos slides
+├── index.md                       # Fonte da apresentação (Quarto / reveal.js)
+├── custom.scss                    # Personalizações adicionais de tema
+├── _extensions/clean/             # Extensão quarto-revealjs-clean (tema base)
+│   ├── _extension.yml
+│   ├── clean.scss
+│   └── mathjax-config.js
+├── imgs/
 │   ├── logo.png
-│   └── privacy.png
+│   ├── privacy.png
+│   └── qrcode.png                 # QR code para ericbrasil.com.br/oficina-ia-unilab
 ├── ollama_modelfile/
-│   └── Modelfile              # Exemplo de Modelfile (assistente de resumo)
-├── CITATION.cff              # Metadados para citação
-├── LICENSE.md                # Licença CC BY-NC-SA 4.0
-└── README.md                 # Este arquivo
+│   └── Modelfile                  # Exemplo: assistente de fichamento acadêmico
+├── CITATION.cff                   # Metadados para citação
+├── LICENSE.md                     # CC BY-NC-SA 4.0
+└── README.md
 ```
 
 ## Como renderizar os slides
 
-Requisitos: [Quarto](https://quarto.org) instalado.
+Requisitos: [Quarto](https://quarto.org) ≥ 1.4 instalado.
 
 ```bash
 git clone https://github.com/ericbrasiln/oficina-ia-unilab.git
@@ -65,17 +76,29 @@ cd oficina-ia-unilab
 quarto render index.md --to revealjs
 ```
 
-Abra `index.html` no navegador.
+Abra `index.html` no navegador. Para edição interativa:
+
+```bash
+quarto preview index.md
+```
+
+### Tema visual
+
+A apresentação usa o tema [quarto-revealjs-clean](https://github.com/grantmcdermott/quarto-revealjs-clean) (Grant McDermott) com personalizações em `custom.scss`. O tema combina:
+
+- Tipografia **Roboto** (corpo e títulos)
+- Fundo branco, layout limpo
+- Cor de destaque teal (`#107895`)
 
 ## Requisitos para a oficina
 
 - Laptop (obrigatório)
 - Não é necessário conhecimento prévio de programação
-- Para a Parte 3: instalar o [Ollama](https://ollama.com) antes ou durante a oficina
+- Para explorar modelos locais: instalar o [Ollama](https://ollama.com) antes ou durante a oficina
 
 ## Observação sobre autoria e IA
 
-Parte dos conteúdos desta apresentação foi produzida com o apoio de assistentes de IA, sob a curadoria e as escolhas editoriais do professor Eric Brasil. O uso de assistentes de IA foi informado e acompanhado de decisões metodológicas do autor.
+Parte dos conteúdos desta apresentação foi produzida com o apoio de assistentes de IA (Hermes Agent — GLM-5.1 e DeepSeek V4 Pro; GPT-5.5 para design do template visual), sob a curadoria e as escolhas editoriais do professor Eric Brasil. Todo o conteúdo, análise e decisões pedagógicas são de responsabilidade exclusiva do autor. O uso de IA foi declarado em conformidade com a Portaria CNPq nº 2.664/2026, Art. 9º, inciso I, alínea (c).
 
 ## Citação sugerida
 
