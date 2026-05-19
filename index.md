@@ -21,7 +21,7 @@ description: "Oficina sobre IA generativa no contexto universitário: fundamento
 toc: false
 ---
 
-## {.center}
+## {.center .title-slide}
 
 ![Acesse a oficina online](imgs/qrcode.png){width=120px}
 
@@ -91,7 +91,7 @@ toc: false
 
 ---
 
-## 1. O que é IA generativa? {.center}
+## 1. O que é IA generativa? {.center .part1}
 
 ---
 
@@ -297,7 +297,7 @@ Resultado:
 
 ---
 
-## 2. Chatbots na prática acadêmica {.center}
+## 2. Chatbots na prática acadêmica {.center .part2}
 
 ---
 
@@ -540,7 +540,7 @@ Exemplo:
 
 ---
 
-## 3. Horizontes avançados {.center}
+## 3. Horizontes avançados {.center .part3}
 
 ---
 
