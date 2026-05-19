@@ -277,10 +277,10 @@ Resultado:
 
 **🔒 Modelos Fechados**
 
-- Desenvolvidos big techs (OpenAI, Google)  
+- Desenvolvidos por big techs (OpenAI, Google)  
 - Acesso via APIs ou interfaces web  
 - Pouca transparência (_black box_)  
-- Seus dados podem ser usados para treinar  
+- Seus dados podem ser usados para treinar novos modelos
 - Exemplos: GPT-5, Claude, Gemini
 
 ---
@@ -293,7 +293,7 @@ Resultado:
 - Executáveis localmente, no seu computador  
 - Maior controle e privacidade  
 - Ninguém vê seus prompts  
-- Exemplos: LLaMA, Mistral, Qwen, Gemma
+- Exemplos: LLaMA, Mistral, Qwen, Gemma, Deepseek
 
 ---
 
@@ -310,7 +310,7 @@ Resultado:
 | **Copilot** | Microsoft | Sim | Sim |
 | **Claude** | Anthropic | Sim (limitado) | Não |
 
-📌 Todos funcionam com LLMs por trás. As diferenças principais são: modelo, limite de uso gratuito, busca na web e integração com outros serviços.
+## 📌 Todos funcionam com LLMs por trás. As diferenças principais são: modelo, limite de uso gratuito, busca na web e integração com outros serviços. {.center}
 
 ---
 
@@ -320,8 +320,12 @@ Resultado:
 
 É como você "fala" com o chatbot. Quanto **melhor o prompt**, **melhor a resposta**.
 
+---
+
+## O que é um prompt? {.center}
+
 > ❌ Prompt vago: "Fale sobre história do Brasil"  
-> ✅ Prompt claro: "Liste 3 causas econômicas da Independência do Brasil, com breves explicações (máx. 200 palavras)"
+> ✅ Prompt claro: "Liste 3 causas econômicas da Independência do Brasil, com breves explicações, apresentando o debate historiográfico associado a cada uma delas (máx. 500 palavras)"
 
 ---
 
@@ -336,7 +340,7 @@ Resultado:
 
 ## Boas práticas: projetos e instruções personalizadas {.center}
 
-🗂️ Os chatbots permitem criar **projetos** e definir **instruções permanentes** — use!
+🗂️ Os chatbots permitem criar **projetos** e definir **instruções permanentes**
 
 - **[ChatGPT](https://chatgpt.com)**: *Projects* → organize conversas por projeto + *Custom Instructions* em Settings
 - **[Claude](https://claude.ai)**: *Projects* → adicione documentos de contexto + instruções do projeto
@@ -350,8 +354,8 @@ Resultado:
 
 - Faça upload de PDFs, artigos, sites, vídeos do YouTube  
 - O modelo responde **com base apenas nos seus fontes** — menos alucinação  
-- Gera resumos, fichamentos, mapas conceptuais e podcasts automatisch  
-- Ideal para **fichamento, revisão de literatura e estudo dirigido**
+- Gera resumos, fichamentos, mapas conceptuais e podcasts
+- - Ideal para **fichamento, revisão de literatura e estudo dirigido**
 
 ## ⚠️ Dados enviados ao Google: não use documentos sensíveis. {.center}
 
@@ -407,10 +411,11 @@ Resultado:
 
 ## Usos na escrita acadêmica {.center}
 
-- **Planejamento**: estruturar o roteiro de um artigo  
 - **Revisão**: identificar problemas de clareza, coesão, gramática  
+- **Planejamento**: estruturar o roteiro de um artigo  
 - **Tradução**: versões em outros idiomas para publicação  
 - **Formatação**: ajustar citações, referências
+- **Brainstorm**: ajudar na sugestão de títulos
 
 ---
 
@@ -424,7 +429,13 @@ Resultado:
 
 📌 **Planejamento:**
 
-> "Preciso escrever um artigo de 20 páginas sobre X. Proponha uma estrutura com seções, subseções e estimativa de páginas por seção. Considere o formato IMRAD."
+> "Preciso escrever um paper para o evento acadêmico X a partir do meu TCC. Leia o TCC em anexo [já publicado] e proponha uma estrutura com seções, subseções e estimativa de páginas por seção."
+
+## {.center}
+
+📌 **Brainstorm:**
+
+> "A partir da estrutura e do TCC, proponha 3 títulos para o paper e 5 palavras-chave. Leve em consideração critérios de indexação de bases científicas."
 
 ---
 
@@ -638,11 +649,11 @@ ollama run assistente
 
 ## Codex e agentes de IA {.center}
 
-🔧 LLMs estão evoluindo de **geradores de texto** para **agentes que agem**:
+🔧 LLMs estão evoluindo de **geradores de texto** para **agentes que tomam decisões a usam ferramentas**:
 
 - Modelos agora podem **chamar ferramentas**: buscar na web, ler arquivos, executar código, acessar APIs
-- Exemplos: **Codex CLI** (OpenAI), **Claude Code** (Anthropic), **OpenCode** (Ollama local), **Hermes Agent**
-- Isso se desdobra em **agentes de IA**: sistemas autônomos que planejam e executam tarefas multi-etapas
+- Exemplos: **Codex CLI** (OpenAI), **Claude Code** (Anthropic), **OpenCode** (Ollama local),
+- Isso se desdobra em **agentes de IA**: sistemas autônomos que planejam e executam tarefas multi-etapas: **Hermes Agent** (Nous Research), **OpenClaw**
 
 ---
 

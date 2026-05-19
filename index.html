@@ -6,8 +6,8 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.37">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.36">
 
   <meta name="author" content="Eric Brasil">
   <title>IA Generativa na Vida Universitária</title>
@@ -491,14 +491,13 @@ Ollama, agentes, RAG.</li>
 <h2>Modelos Fechados vs Abertos</h2>
 <p><strong>🔒 Modelos Fechados</strong></p>
 <ul>
-<li>Desenvolvidos big techs (OpenAI, Google)<br>
+<li>Desenvolvidos por big techs (OpenAI, Google)<br>
 </li>
 <li>Acesso via APIs ou interfaces web<br>
 </li>
 <li>Pouca transparência (<em>black box</em>)<br>
 </li>
-<li>Seus dados podem ser usados para treinar<br>
-</li>
+<li>Seus dados podem ser usados para treinar novos modelos</li>
 <li>Exemplos: GPT-5, Claude, Gemini</li>
 </ul>
 </section>
@@ -514,7 +513,7 @@ Ollama, agentes, RAG.</li>
 </li>
 <li>Ninguém vê seus prompts<br>
 </li>
-<li>Exemplos: LLaMA, Mistral, Qwen, Gemma</li>
+<li>Exemplos: LLaMA, Mistral, Qwen, Gemma, Deepseek</li>
 </ul>
 </section>
 <section id="chatbots-na-prática-acadêmica" class="slide level2 center">
@@ -558,15 +557,20 @@ Ollama, agentes, RAG.</li>
 </tr>
 </tbody>
 </table>
-<p>📌 Todos funcionam com LLMs por trás. As diferenças principais são: modelo, limite de uso gratuito, busca na web e integração com outros serviços.</p>
+</section>
+<section id="todos-funcionam-com-llms-por-trás.-as-diferenças-principais-são-modelo-limite-de-uso-gratuito-busca-na-web-e-integração-com-outros-serviços." class="slide level2 center">
+<h2>📌 Todos funcionam com LLMs por trás. As diferenças principais são: modelo, limite de uso gratuito, busca na web e integração com outros serviços.</h2>
 </section>
 <section id="o-que-é-um-prompt" class="slide level2 center">
 <h2>O que é um prompt?</h2>
 <p>💬 <strong>Prompt = instrução que você dá à IA</strong></p>
 <p>É como você “fala” com o chatbot. Quanto <strong>melhor o prompt</strong>, <strong>melhor a resposta</strong>.</p>
+</section>
+<section id="o-que-é-um-prompt-1" class="slide level2 center">
+<h2>O que é um prompt?</h2>
 <blockquote>
 <p>❌ Prompt vago: “Fale sobre história do Brasil”<br>
-✅ Prompt claro: “Liste 3 causas econômicas da Independência do Brasil, com breves explicações (máx. 200 palavras)”</p>
+✅ Prompt claro: “Liste 3 causas econômicas da Independência do Brasil, com breves explicações, apresentando o debate historiográfico associado a cada uma delas (máx. 500 palavras)”</p>
 </blockquote>
 </section>
 <section id="prompt-engineering-4-princípios" class="slide level2 center">
@@ -583,7 +587,7 @@ Ollama, agentes, RAG.</li>
 </section>
 <section id="boas-práticas-projetos-e-instruções-personalizadas" class="slide level2 center">
 <h2>Boas práticas: projetos e instruções personalizadas</h2>
-<p>🗂️ Os chatbots permitem criar <strong>projetos</strong> e definir <strong>instruções permanentes</strong> — use!</p>
+<p>🗂️ Os chatbots permitem criar <strong>projetos</strong> e definir <strong>instruções permanentes</strong></p>
 <ul>
 <li><strong><a href="https://chatgpt.com">ChatGPT</a></strong>: <em>Projects</em> → organize conversas por projeto + <em>Custom Instructions</em> em Settings</li>
 <li><strong><a href="https://claude.ai">Claude</a></strong>: <em>Projects</em> → adicione documentos de contexto + instruções do projeto</li>
@@ -600,9 +604,10 @@ Ollama, agentes, RAG.</li>
 </li>
 <li>O modelo responde <strong>com base apenas nos seus fontes</strong> — menos alucinação<br>
 </li>
-<li>Gera resumos, fichamentos, mapas conceptuais e podcasts automatisch<br>
-</li>
+<li>Gera resumos, fichamentos, mapas conceptuais e podcasts</li>
+<li><ul>
 <li>Ideal para <strong>fichamento, revisão de literatura e estudo dirigido</strong></li>
+</ul></li>
 </ul>
 </section>
 <section id="dados-enviados-ao-google-não-use-documentos-sensíveis." class="slide level2 center">
@@ -664,13 +669,14 @@ Ollama, agentes, RAG.</li>
 <section id="usos-na-escrita-acadêmica" class="slide level2 center">
 <h2>Usos na escrita acadêmica</h2>
 <ul>
-<li><strong>Planejamento</strong>: estruturar o roteiro de um artigo<br>
-</li>
 <li><strong>Revisão</strong>: identificar problemas de clareza, coesão, gramática<br>
+</li>
+<li><strong>Planejamento</strong>: estruturar o roteiro de um artigo<br>
 </li>
 <li><strong>Tradução</strong>: versões em outros idiomas para publicação<br>
 </li>
 <li><strong>Formatação</strong>: ajustar citações, referências</li>
+<li><strong>Brainstorm</strong>: ajudar na sugestão de títulos</li>
 </ul>
 </section>
 <section id="usos-na-escrita-exemplos-de-prompts" class="slide level2 center">
@@ -684,10 +690,17 @@ Ollama, agentes, RAG.</li>
 <h2></h2>
 <p>📌 <strong>Planejamento:</strong></p>
 <blockquote>
-<p>“Preciso escrever um artigo de 20 páginas sobre X. Proponha uma estrutura com seções, subseções e estimativa de páginas por seção. Considere o formato IMRAD.”</p>
+<p>“Preciso escrever um paper para o evento acadêmico X a partir do meu TCC. Leia o TCC em anexo [já publicado] e proponha uma estrutura com seções, subseções e estimativa de páginas por seção.”</p>
 </blockquote>
 </section>
 <section id="section-4" class="slide level2 center">
+<h2></h2>
+<p>📌 <strong>Brainstorm:</strong></p>
+<blockquote>
+<p>“A partir da estrutura e do TCC, proponha 3 títulos para o paper e 5 palavras-chave. Leve em consideração critérios de indexação de bases científicas.”</p>
+</blockquote>
+</section>
+<section id="section-5" class="slide level2 center">
 <h2></h2>
 <p>⚠️ <strong>Sempre verifique</strong>: fontes, citações e dados gerados pela IA.</p>
 </section>
@@ -752,7 +765,7 @@ Ollama, agentes, RAG.</li>
 <h2>Portaria CNPq do CNPq: IA Generativa e Integridade</h2>
 <p>📜 <strong><a href="http://memoria2.cnpq.br/web/guest/view/-/journal_content/56_INSTANCE_0oED/10157/23142775?COMPANY_ID=10132">Portaria CNPq nº 2.664, de 6 de março de 2026</a></strong> — Política de Integridade na Atividade Científica do CNPq</p>
 </section>
-<section id="section-5" class="slide level2 center">
+<section id="section-6" class="slide level2 center">
 <h2></h2>
 <p>📌 <strong>Art. 9º, inciso I</strong> — Diretrizes de integridade na pesquisa:</p>
 <blockquote>
@@ -893,11 +906,11 @@ PARAMETER num_ctx 4096</code></pre>
 </section>
 <section id="codex-e-agentes-de-ia" class="slide level2 center">
 <h2>Codex e agentes de IA</h2>
-<p>🔧 LLMs estão evoluindo de <strong>geradores de texto</strong> para <strong>agentes que agem</strong>:</p>
+<p>🔧 LLMs estão evoluindo de <strong>geradores de texto</strong> para <strong>agentes que tomam decisões a usam ferramentas</strong>:</p>
 <ul>
 <li>Modelos agora podem <strong>chamar ferramentas</strong>: buscar na web, ler arquivos, executar código, acessar APIs</li>
-<li>Exemplos: <strong>Codex CLI</strong> (OpenAI), <strong>Claude Code</strong> (Anthropic), <strong>OpenCode</strong> (Ollama local), <strong>Hermes Agent</strong></li>
-<li>Isso se desdobra em <strong>agentes de IA</strong>: sistemas autônomos que planejam e executam tarefas multi-etapas</li>
+<li>Exemplos: <strong>Codex CLI</strong> (OpenAI), <strong>Claude Code</strong> (Anthropic), <strong>OpenCode</strong> (Ollama local),</li>
+<li>Isso se desdobra em <strong>agentes de IA</strong>: sistemas autônomos que planejam e executam tarefas multi-etapas: <strong>Hermes Agent</strong> (Nous Research), <strong>OpenClaw</strong></li>
 </ul>
 </section>
 <section id="codex-e-agentes-de-ia-1" class="slide level2 center">
