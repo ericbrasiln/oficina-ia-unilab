@@ -6,7 +6,7 @@ date-format: full
 lang: pt-br
 format:
   revealjs:
-    theme: serif
+    theme: [default, _extensions/clean/clean.scss]
     slide-number: true
     incremental: false
     chalkboard:

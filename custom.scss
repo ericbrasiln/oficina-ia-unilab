@@ -1,80 +1,702 @@
+/*-- scss:defaults --*/
+
+// ── Tipografia ──
+$mainFont: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$mainFontSize: 28px;
+$headingFont: "Playfair Display", "Georgia", "Times New Roman", serif;
+$headingFontWeight: 700;
+$headingTextTransform: none;
+$headingTextShadow: none;
+$heading1Size: 2.6em;
+$heading2Size: 1.9em;
+$heading3Size: 1.4em;
+
+// ── Cores ──
+$backgroundColor: #ffffff;
+$mainColor: #2B2D42;
+$headingColor: #1D3557;
+$link-color: #E63946;
+$link-color-hover: #c1121f;
+$selection-background-color: #E63946;
+$selection-color: #fff;
+
+// ── Código ──
+$code-block-bg: #1E1E2E;
+$code-block-font-size: 0.7em;
+$code-block-border-left: 4px solid #E63946;
+
+// ── Callouts ──
+$callout-color-note: #2A9D8F;
+$callout-color-warning: #E9C46A;
+$callout-color-important: #E63946;
+$callout-color-tip: #1D3557;
+
 /*-- scss:rules --*/
 
-/* Importar a fonte do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap');
+// ── Google Fonts ──
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&display=swap');
 
-/* Aplicar a fonte à apresentação */
+// ── Base overrides ──
 .reveal {
-  font-family: 'Atkinson Hyperlegible Next', sans-serif;
-  background-color: #f4c2c2; /* Fundo rosa pastel */
-  color: #1c140d; /* Texto escuro */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #2B2D42;
+  background-color: #ffffff;
 }
 
-/* Ajuste para evitar que o rodapé fique sobreposto ao conteúdo */
-.reveal .slide {
-  padding-bottom: 30px;
-}
-
-/* Títulos principais (h1, h2, h3) */
-.reveal h1, 
-.reveal h2, 
+.reveal h1,
+.reveal h2,
 .reveal h3 {
-  font-family: 'Atkinson Hyperlegible Next', sans-serif;
+  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
   font-weight: 700;
-  color: #1c140d; /* Texto escuro */
-  text-align: left;
+  text-transform: none;
+  letter-spacing: -0.02em;
 }
 
-/* Alinhar título do primeiro slide à esquerda */
-.reveal .title-slide h1 {
-  text-align: left;
+.reveal h1 {
+  font-size: 2.6em;
+  color: #1D3557;
 }
 
-/* Informações do front matter (título, subtítulo, autor e data) */
-.reveal .title, 
-.reveal .subtitle,
-.reveal .date {
-  color: #1c140d; /* Texto escuro */
-  text-align: center;
+.reveal h2 {
+  font-size: 1.9em;
+  color: #1D3557;
+  margin-bottom: 0.5em;
 }
 
-.reveal .author {
-  color: #1c140d; /* Texto escuro */
-  text-align: left;
+.reveal h3 {
+  font-size: 1.4em;
+  color: #2B2D42;
+  font-weight: 600;
 }
 
-/* Aplicar a fonte ao corpo do texto com tamanho menor */
-.reveal p, 
-.reveal ul li {
-  font-family: 'Atkinson Hyperlegible Next', sans-serif;
+.reveal p,
+.reveal li {
+  line-height: 1.6;
+}
+
+// ── Slide de conteúdo: fundo branco com geométrico sutil ──
+.reveal .slides section {
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.reveal .slides section:not(.part1):not(.part2):not(.part3):not(.title-slide)::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 280px;
+  height: 280px;
+  background:
+    radial-gradient(circle at 80% 80%, rgba(29, 53, 87, 0.07) 0%, transparent 70%),
+    linear-gradient(135deg, transparent 60%, rgba(29, 53, 87, 0.05) 60%, rgba(29, 53, 87, 0.025) 100%);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.reveal .slides section:not(.part1):not(.part2):not(.part3):not(.title-slide)::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 120px;
+  height: 120px;
+  border: 2px solid rgba(29, 53, 87, 0.06);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+// ── Slide de título ──
+.reveal .slides section.title-slide {
+  background: linear-gradient(160deg, #ffffff 0%, #F8F9FA 100%);
+}
+
+.reveal .slides section.title-slide::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -80px;
+  width: 400px;
+  height: 400px;
+  border: 3px solid rgba(230, 57, 70, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.reveal .slides section.title-slide::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -40px;
+  width: 220px;
+  height: 220px;
+  border: 3px solid rgba(42, 157, 143, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.reveal .slides section.title-slide h1 {
+  font-size: 2.8em;
+  color: #1D3557;
+}
+
+.reveal .slides section.title-slide h2 {
+  font-size: 1.4em;
+  color: #6C757D;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 1em;
-  color: #1c140d; /* Texto escuro */
+  font-style: italic;
 }
 
-/* Estilizando os links */
-.reveal a {
-  color: #379683; /* Verde */
+// ── PARTE 1 — Coral ──
+.reveal .slides section.part1 {
+  background: linear-gradient(135deg, #E63946 0%, #c1121f 100%) !important;
+  color: #ffffff !important;
 }
 
-/* Estilizando os bullet points */
-.reveal ul li {
-  color: #1c140d; /* Texto escuro */
+.reveal .slides section.part1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.08);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
-/* Estilizando os blocos de código */
+.reveal .slides section.part1::after {
+  content: '';
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  width: 200px;
+  height: 200px;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.reveal .slides section.part1 h1,
+.reveal .slides section.part1 h2,
+.reveal .slides section.part1 h3,
+.reveal .slides section.part1 p,
+.reveal .slides section.part1 li,
+.reveal .slides section.part1 small {
+  color: #ffffff !important;
+}
+
+.reveal .slides section.part1 h2 {
+  position: relative;
+  font-size: 2.4em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.reveal .slides section.part1 h2::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -40px;
+  width: 160px;
+  height: 160px;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.reveal .slides section.part1 h2::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: -60px;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.06);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  pointer-events: none;
+}
+
+// ── PARTE 2 — Teal ──
+.reveal .slides section.part2 {
+  background: linear-gradient(135deg, #2A9D8F 0%, #1a7a6e 100%) !important;
+  color: #ffffff !important;
+}
+
+.reveal .slides section.part2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.08);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.reveal .slides section.part2::after {
+  content: '';
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  width: 200px;
+  height: 200px;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.reveal .slides section.part2 h1,
+.reveal .slides section.part2 h2,
+.reveal .slides section.part2 h3,
+.reveal .slides section.part2 p,
+.reveal .slides section.part2 li,
+.reveal .slides section.part2 small {
+  color: #ffffff !important;
+}
+
+.reveal .slides section.part2 h2 {
+  position: relative;
+  font-size: 2.4em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.reveal .slides section.part2 h2::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -40px;
+  width: 160px;
+  height: 160px;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.reveal .slides section.part2 h2::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: -60px;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.06);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  pointer-events: none;
+}
+
+// ── PARTE 3 — Amber/Dourado ──
+.reveal .slides section.part3 {
+  background: linear-gradient(135deg, #E9C46A 0%, #D4A843 100%) !important;
+  color: #1D3557 !important;
+}
+
+.reveal .slides section.part3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 350px;
+  background: rgba(29, 53, 87, 0.06);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.reveal .slides section.part3::after {
+  content: '';
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  width: 200px;
+  height: 200px;
+  border: 3px solid rgba(29, 53, 87, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.reveal .slides section.part3 h1,
+.reveal .slides section.part3 h2,
+.reveal .slides section.part3 h3,
+.reveal .slides section.part3 p,
+.reveal .slides section.part3 li,
+.reveal .slides section.part3 small {
+  color: #1D3557 !important;
+}
+
+.reveal .slides section.part3 h2 {
+  position: relative;
+  font-size: 2.4em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reveal .slides section.part3 h2::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -40px;
+  width: 160px;
+  height: 160px;
+  border: 2px solid rgba(29, 53, 87, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.reveal .slides section.part3 h2::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: -60px;
+  width: 100px;
+  height: 100px;
+  background: rgba(29, 53, 87, 0.04);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  pointer-events: none;
+}
+
+// ── Blockquotes ──
+.reveal blockquote {
+  background: #F8F9FA;
+  border-left: 5px solid #E63946;
+  padding: 1em 1.4em;
+  margin: 1.2em 0;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-style: italic;
+  color: #3d3d3d;
+  position: relative;
+  z-index: 1;
+}
+
+.reveal blockquote::before {
+  content: '\201C';
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 3em;
+  color: rgba(230, 57, 70, 0.15);
+  font-family: 'Playfair Display', serif;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.reveal blockquote p {
+  margin: 0;
+}
+
+// ── Code blocks ──
 .reveal pre {
-  padding: 10px;
-  border-radius: 5px;
-  font-family: 'Atkinson Hyperlegible Next', sans-serif;
-  font-size: 0.9em;
-  overflow-x: auto;
+  background: #1E1E2E !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  font-size: 0.7em;
+  margin: 1em 0;
 }
 
-/* criar classe para centralizar imagens */
-.center-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 50%;
+.reveal pre code {
+  padding: 1.2em 1.4em;
+  color: #CDD6F4;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  line-height: 1.55;
+  background: transparent !important;
+}
+
+// Inline code
+.reveal code:not(pre code) {
+  background: rgba(230, 57, 70, 0.08);
+  color: #c1121f;
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+// ── Tabelas ──
+.reveal table {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1em auto;
+  font-size: 0.75em;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.reveal table thead th {
+  background: linear-gradient(135deg, #1D3557, #2a4a6e);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.7em 1.2em;
+  text-align: left;
+  font-size: 0.95em;
+  letter-spacing: 0.02em;
+}
+
+.reveal table thead th:first-child {
+  border-radius: 10px 0 0 0;
+}
+
+.reveal table thead th:last-child {
+  border-radius: 0 10px 0 0;
+}
+
+.reveal table tbody tr:nth-child(even) {
+  background: rgba(233, 236, 239, 0.5);
+}
+
+.reveal table tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+.reveal table tbody td {
+  padding: 0.6em 1.2em;
+  border-bottom: 1px solid #E9ECEF;
+  color: #2B2D42;
+}
+
+.reveal table tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 10px;
+}
+
+.reveal table tbody tr:last-child td:last-child {
+  border-radius: 0 0 10px 0;
+}
+
+// ── Links ──
+.reveal a {
+  color: #E63946;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.reveal a:hover {
+  color: #c1121f;
+}
+
+// ── Slide Numbers (pill) ──
+.reveal .slide-number {
+  background: rgba(230, 57, 70, 0.9) !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding: 4px 14px !important;
+  border-radius: 20px !important;
+  bottom: 14px !important;
+  right: 14px !important;
+  font-family: 'Inter', sans-serif !important;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px rgba(230, 57, 70, 0.3);
+}
+
+// ── Listas ──
+.reveal ul {
+  list-style: none;
+  padding-left: 0.5em;
+}
+
+.reveal ul li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.4em;
+}
+
+.reveal ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 8px;
+  height: 8px;
+  background: #E63946;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.reveal ul ul li::before {
+  background: transparent;
+  border: 2px solid #2A9D8F;
+  width: 6px;
+  height: 6px;
+}
+
+.reveal ol {
+  counter-reset: item;
+  list-style: none;
+  padding-left: 0.5em;
+}
+
+.reveal ol li {
+  counter-increment: item;
+  position: relative;
+  padding-left: 2.2em;
+  margin-bottom: 0.4em;
+}
+
+.reveal ol li::before {
+  content: counter(item);
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  width: 1.4em;
+  height: 1.4em;
+  background: #1D3557;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 0.7em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-family: 'Inter', sans-serif;
+}
+
+// ── Imagens ──
+.reveal img {
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+// ── HR ──
+.reveal hr {
+  border: none;
+  height: 3px;
+  background: linear-gradient(90deg, #E63946, #2A9D8F, #E9C46A);
+  border-radius: 2px;
+  margin: 1.5em 0;
+  opacity: 0.6;
+}
+
+// ── Small text ──
+.reveal small {
+  font-size: 0.6em;
+  color: #6C757D;
+  vertical-align: baseline;
+}
+
+// ── Progress bar ──
+.reveal .progress {
+  background: rgba(233, 236, 239, 0.5);
+  height: 4px;
+}
+
+.reveal .progress span {
+  background: linear-gradient(90deg, #E63946, #2A9D8F, #E9C46A) !important;
+}
+
+// ── Controls ──
+.reveal .controls .controls-arrow {
+  color: #E63946;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.reveal .controls .controls-arrow:hover {
+  opacity: 1;
+}
+
+// ── Speaker notes ──
+.reveal .speaker-notes {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7em;
+  color: #6C757D;
+}
+
+// ── Callouts (Quarto) ──
+.reveal .callout {
+  border-radius: 10px;
+  padding: 0.8em 1.2em;
+  margin: 1em 0;
+  font-size: 0.85em;
+  position: relative;
+  z-index: 1;
+}
+
+.reveal .callout .callout-title {
+  font-weight: 700;
+  margin-bottom: 0.3em;
+  font-family: 'Inter', sans-serif;
+}
+
+.reveal .callout-note {
+  background: rgba(42, 157, 143, 0.08);
+  border-left: 4px solid #2A9D8F;
+}
+
+.reveal .callout-warning {
+  background: rgba(233, 196, 106, 0.12);
+  border-left: 4px solid #E9C46A;
+}
+
+.reveal .callout-important {
+  background: rgba(230, 57, 70, 0.08);
+  border-left: 4px solid #E63946;
+}
+
+.reveal .callout-tip {
+  background: rgba(29, 53, 87, 0.06);
+  border-left: 4px solid #1D3557;
+}
+
+// ── Columns ──
+.reveal .columns {
+  display: flex;
+  gap: 1.5em;
+  align-items: flex-start;
+}
+
+// ── Responsive ──
+@media (max-width: 800px) {
+  .reveal {
+    font-size: 22px;
+  }
+  .reveal h1 { font-size: 2em; }
+  .reveal h2 { font-size: 1.5em; }
+}
+
+// ── Print/PDF ──
+@media print {
+  .reveal .slides section {
+    background: #ffffff !important;
+  }
+  .reveal .slides section.part1,
+  .reveal .slides section.part2,
+  .reveal .slides section.part3 {
+    background: #ffffff !important;
+    color: #2B2D42 !important;
+  }
+  .reveal .slides section.part1 h1,
+  .reveal .slides section.part1 h2,
+  .reveal .slides section.part1 h3,
+  .reveal .slides section.part1 p,
+  .reveal .slides section.part1 li,
+  .reveal .slides section.part1 small,
+  .reveal .slides section.part2 h1,
+  .reveal .slides section.part2 h2,
+  .reveal .slides section.part2 h3,
+  .reveal .slides section.part2 p,
+  .reveal .slides section.part2 li,
+  .reveal .slides section.part2 small,
+  .reveal .slides section.part3 h1,
+  .reveal .slides section.part3 h2,
+  .reveal .slides section.part3 h3,
+  .reveal .slides section.part3 p,
+  .reveal .slides section.part3 li,
+  .reveal .slides section.part3 small {
+    color: #2B2D42 !important;
+  }
 }
