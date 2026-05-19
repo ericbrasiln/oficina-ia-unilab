@@ -145,14 +145,18 @@ Simplificando:
 
 ---
 
-## Redes neurais e Deep Learning {.center}
+## Redes neurais {.center}
 
-🧠 **Redes neurais**: estruturas matemáticas inspiradas no cérebro
+🧠 Estruturas matemáticas inspiradas no cérebro
 
 - Recebem entradas → processam em camadas → produzem saídas  
 - Aprendem a reconhecer padrões ajustando "pesos" internos
 
-🔢 **Deep Learning**: redes neurais com **muitas camadas**
+---
+
+## Deep Learning {.center}
+
+🔢 Redes neurais com **muitas camadas**
 
 - Cada camada aprende representações mais complexas  
 - É a base dos LLMs modernos
@@ -165,6 +169,10 @@ Simplificando:
 🔗 [arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762)
 
 **Mecanismo de atenção**: o modelo decide quais partes do texto são mais relevantes para gerar a próxima palavra.
+
+---
+
+## Transformers: a revolução {.center}
 
 Resultado:
 
@@ -334,20 +342,18 @@ Resultado:
 - **[Claude](https://claude.ai)**: *Projects* → adicione documentos de contexto + instruções do projeto
 - **[Gemini](https://gemini.google.com)**: *Gems* → crie personas com instruções salvas
 
-> 💡 Defina sua área, idioma e estilo uma vez — o modelo já começa cada conversa com esse contexto.
+## 💡 Defina sua área, idioma e estilo uma vez — o modelo já começa cada conversa com esse contexto. {.center}
 
 ---
 
-## NotebookLM: IA com seus documentos {.center}
-
-📓 **[NotebookLM](https://notebooklm.google.com)** — ferramenta gratuita do Google que combina LLM com **seus documentos**:
+## [NotebookLM](https://notebooklm.google.com): IA com seus documentos {.center}
 
 - Faça upload de PDFs, artigos, sites, vídeos do YouTube  
 - O modelo responde **com base apenas nos seus fontes** — menos alucinação  
 - Gera resumos, fichamentos, mapas conceptuais e podcasts automatisch  
 - Ideal para **fichamento, revisão de literatura e estudo dirigido**
 
-> ⚠️ Dados enviados ao Google — não use documentos sensíveis.
+## ⚠️ Dados enviados ao Google: não use documentos sensíveis. {.center}
 
 ---
 
@@ -368,6 +374,8 @@ Resultado:
 
 > "Sou estudante de História e preciso entender o conceito de 'história dos conceitos' de Reinhart Koselleck. Explique em termos simples e depois dê um exemplo de aplicação."
 
+## {.center}
+
 📌 **Revisão de literatura:**
 
 > "Liste as 5 principais abordagens teóricas sobre a Revolução Francesa, com 1 parágrafo cada. Para cada uma, indique um autor representativo e uma obra de referência."
@@ -375,8 +383,6 @@ Resultado:
 ---
 
 ## Usos no estudo {.center}
-
-📖 Como chatbots podem ajudar:
 
 - **Resumo**: "Resuma este texto em 5 pontos-chave"  
 - **Flashcards**: "Gere 10 flashcards sobre este conteúdo"  
@@ -391,6 +397,8 @@ Resultado:
 
 > "Aqui está um artigo de 10 páginas sobre X [cole o texto]. Produza um fichamento com: referência completa, tema central, argumento principal, 3 conceitos-chave, 2 citações relevantes com página."
 
+## {.center}
+
 📌 **Questões de estudo:**
 
 > "Gere 8 questões de múltipla escolha sobre o capítulo 3 do texto abaixo, com 4 alternativas cada. Marque a resposta correta."
@@ -398,8 +406,6 @@ Resultado:
 ---
 
 ## Usos na escrita acadêmica {.center}
-
-✍️ Como chatbots podem ajudar:
 
 - **Planejamento**: estruturar o roteiro de um artigo  
 - **Revisão**: identificar problemas de clareza, coesão, gramática  
@@ -413,6 +419,8 @@ Resultado:
 📌 **Revisão:**
 
 > "Revise este parágrafo quanto a clareza, coerência e gramática. Aponte os problemas e sugira reescritas. Não reescreva o texto todo — apenas indique o que melhorar e como."
+
+## {.center}
 
 📌 **Planejamento:**
 
@@ -479,9 +487,11 @@ Exemplo:
 
 ---
 
-## Portaria CNPq 2.664/2026: IA Generativa e Integridade {.center}
+## Portaria CNPq  do CNPq: IA Generativa e Integridade {.center}
 
 📜 **[Portaria CNPq nº 2.664, de 6 de março de 2026](http://memoria2.cnpq.br/web/guest/view/-/journal_content/56_INSTANCE_0oED/10157/23142775?COMPANY_ID=10132)** — Política de Integridade na Atividade Científica do CNPq
+
+## {.center}
 
 📌 **Art. 9º, inciso I** — Diretrizes de integridade na pesquisa:
 
@@ -489,17 +499,13 @@ Exemplo:
 
 ---
 
-## Portaria CNPq 2.664/2026: vedações {.center}
-
-⚠️ O que a portaria **veda**:
+## ⚠️ O que a portaria **veda** {.center}
 
 > **d)** é vedada a submissão de conteúdo gerado por IAG como se fosse de autoria humana, sendo os autores integralmente responsáveis pelo conteúdo final, inclusive por eventuais plágios ou imprecisões geradas pela IAG;
 
 ---
 
-## Portaria CNPq 2.664/2026: vedações {.center}
-
-⚠️ O que a portaria **veda**:
+## ⚠️ O que a portaria **veda** {.center}
 
 > **e)** é vedada a inserção de projetos de pesquisa de terceiros em ferramentas de IAG para elaboração de pareceres científicos;
 
@@ -514,7 +520,7 @@ Exemplo:
 ❌ **Nunca** inserir projetos de terceiros em IAG para gerar pareceres  
 ✅ **Responsabilidade total** do autor sobre o conteúdo final
 
-> 💡 Se a IA alucinou uma citação e você incluiu no texto — **a responsabilidade é sua.**
+## 💡 Se a IA alucinou uma citação e você incluiu no texto, **a responsabilidade é sua.** {.center}
 
 ---
 
@@ -528,9 +534,9 @@ Exemplo:
 
 ---
 
-## {.center}
+## 📌 Plágio — inclusive via IAG — é infração **gravíssima**. {.center}
 
-📌 Plágio — inclusive via IAG — é infração **gravíssima**.
+
 
 ---
 
@@ -547,8 +553,6 @@ Exemplo:
 - **Reprodutibilidade**: mesma versão, mesmo resultado  
 - **Personalização**: crie personas e instruções permanentes
 
-> 💡 Essas vantagens são decisivas em contextos acadêmicos — especialmente com dados sensíveis.
-
 ---
 
 ## Ollama: IA no seu computador {.center}
@@ -560,13 +564,13 @@ Exemplo:
 - Use pelo app (interface gráfica) ou pelo terminal  
 - Crie **Modelfiles** com instruções permanentes personalizadas
 
-> 💡 É como ter um ChatGPT privado no seu computador — ninguém vê seus textos.
+## 💡 É como ter um ChatGPT privado no seu computador — ninguém vê seus textos. {.center}
 
 ---
 
 ## Modelfile: seu assistente sob medida {.center}
 
-Um **Modelfile** define instruções permanentes para o modelo — um "system prompt" que nunca se perde:
+Define instruções permanentes para o modelo — um "system prompt" que nunca se perde:
 
 ```
 FROM gemma3:4b
@@ -619,8 +623,6 @@ ollama run assistente
 - Gera a resposta **com base nas fontes recuperadas** — não apenas no treinamento  
 - Reduz alucinações e permite **citar fontes**
 
-> 💡 É como o NotebookLM, mas com controle total: você define a base, o modelo e o acesso.
-
 ---
 
 ## RAG na prática {.center}
@@ -631,10 +633,6 @@ ollama run assistente
 2. Os documentos são **indexados** e transformados em vetores  
 3. Quando você faz uma pergunta, o sistema busca os trechos mais relevantes  
 4. O LLM gera a resposta **apoiado nos seus documentos**
-
-📌 Ferramentas: [LlamaIndex](https://www.llamaindex.ai/), [LangChain](https://www.langchain.com/), [AnythingLLM](https://anythingllm.com/), [PrivateGPT](https://privategpt.io/)
-
-> ⚠️ RAG não elimina alucinação — mas **reduz significativamente** quando o documento está na base.
 
 ---
 
@@ -657,7 +655,7 @@ ollama run assistente
 - Executam tarefas repetitivas (limpeza de dados, formatação, transcrição)  
 - **Privacidade**: com modelos locais + agentes, seus dados nunca saem do computador
 
-> 💡 O horizonte é promissor, mas ainda está em consolidação — **fica como convite para estudo futuro**.
+## 💡 O horizonte é promissor, mas ainda está em consolidação — **fica como convite para estudo futuro**. {.center}
 
 ---
 
@@ -676,11 +674,17 @@ ollama run assistente
 | Situação | Recomendação |
 |:---------|:-------------|
 | Exploração de ideias, brainstorming | Chatbot web |
-| Fichamento e resumo de textos | NotebookLM ou chatbot web |
 | Revisão gramatical, tradução | Chatbot web |
+| Fichamento e resumo de textos | NotebookLM ou chatbot web |
+
+---
+
+## Quando usar cada ferramenta? {.center}
+
+| Situação | Recomendação |
+|:---------|:-------------|
 | Análise de documentos sensíveis | Modelo local (Ollama) |
 | Reprodutibilidade em pesquisa | Modelo local (Ollama) ou RAG |
-| Sem internet | Modelo local (Ollama) |
 | Pesquisa avançada em corpora | RAG + modelo local |
 
 ---

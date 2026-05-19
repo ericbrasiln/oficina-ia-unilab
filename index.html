@@ -6,8 +6,8 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.37">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="Eric Brasil">
   <title>IA Generativa na Vida Universitária</title>
@@ -17,9 +17,6 @@
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
   <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -98,7 +95,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-2abc1c5b7b5c7eecd6137558e106e4c3.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-99eeafcedac04850354b682963cedae3.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -331,15 +328,18 @@ Ollama, agentes, RAG.</li>
 <p>⚠️ O modelo não “entende” nem “pensa” — ele <strong>prevê texto provável</strong>.</p>
 </blockquote>
 </section>
-<section id="redes-neurais-e-deep-learning" class="slide level2 center">
-<h2>Redes neurais e Deep Learning</h2>
-<p>🧠 <strong>Redes neurais</strong>: estruturas matemáticas inspiradas no cérebro</p>
+<section id="redes-neurais" class="slide level2 center">
+<h2>Redes neurais</h2>
+<p>🧠 Estruturas matemáticas inspiradas no cérebro</p>
 <ul>
 <li>Recebem entradas → processam em camadas → produzem saídas<br>
 </li>
 <li>Aprendem a reconhecer padrões ajustando “pesos” internos</li>
 </ul>
-<p>🔢 <strong>Deep Learning</strong>: redes neurais com <strong>muitas camadas</strong></p>
+</section>
+<section id="deep-learning" class="slide level2 center">
+<h2>Deep Learning</h2>
+<p>🔢 Redes neurais com <strong>muitas camadas</strong></p>
 <ul>
 <li>Cada camada aprende representações mais complexas<br>
 </li>
@@ -351,6 +351,9 @@ Ollama, agentes, RAG.</li>
 <p>📄 Introduzidos por Vaswani et al.&nbsp;(2017): <em>“Attention is All You Need”</em><br>
 🔗 <a href="https://arxiv.org/abs/1706.03762">arxiv.org/abs/1706.03762</a></p>
 <p><strong>Mecanismo de atenção</strong>: o modelo decide quais partes do texto são mais relevantes para gerar a próxima palavra.</p>
+</section>
+<section id="transformers-a-revolução-1" class="slide level2 center">
+<h2>Transformers: a revolução</h2>
 <p>Resultado:</p>
 <ul>
 <li>Lida com <strong>longos contextos</strong><br>
@@ -583,13 +586,12 @@ Ollama, agentes, RAG.</li>
 <li><strong><a href="https://claude.ai">Claude</a></strong>: <em>Projects</em> → adicione documentos de contexto + instruções do projeto</li>
 <li><strong><a href="https://gemini.google.com">Gemini</a></strong>: <em>Gems</em> → crie personas com instruções salvas</li>
 </ul>
-<blockquote>
-<p>💡 Defina sua área, idioma e estilo uma vez — o modelo já começa cada conversa com esse contexto.</p>
-</blockquote>
+</section>
+<section id="defina-sua-área-idioma-e-estilo-uma-vez-o-modelo-já-começa-cada-conversa-com-esse-contexto." class="slide level2 center">
+<h2>💡 Defina sua área, idioma e estilo uma vez — o modelo já começa cada conversa com esse contexto.</h2>
 </section>
 <section id="notebooklm-ia-com-seus-documentos" class="slide level2 center">
-<h2>NotebookLM: IA com seus documentos</h2>
-<p>📓 <strong><a href="https://notebooklm.google.com">NotebookLM</a></strong> — ferramenta gratuita do Google que combina LLM com <strong>seus documentos</strong>:</p>
+<h2><a href="https://notebooklm.google.com">NotebookLM</a>: IA com seus documentos</h2>
 <ul>
 <li>Faça upload de PDFs, artigos, sites, vídeos do YouTube<br>
 </li>
@@ -599,9 +601,9 @@ Ollama, agentes, RAG.</li>
 </li>
 <li>Ideal para <strong>fichamento, revisão de literatura e estudo dirigido</strong></li>
 </ul>
-<blockquote>
-<p>⚠️ Dados enviados ao Google — não use documentos sensíveis.</p>
-</blockquote>
+</section>
+<section id="dados-enviados-ao-google-não-use-documentos-sensíveis." class="slide level2 center">
+<h2>⚠️ Dados enviados ao Google: não use documentos sensíveis.</h2>
 </section>
 <section id="usos-na-pesquisa" class="slide level2 center">
 <h2>Usos na pesquisa</h2>
@@ -622,6 +624,9 @@ Ollama, agentes, RAG.</li>
 <blockquote>
 <p>“Sou estudante de História e preciso entender o conceito de ‘história dos conceitos’ de Reinhart Koselleck. Explique em termos simples e depois dê um exemplo de aplicação.”</p>
 </blockquote>
+</section>
+<section id="section-1" class="slide level2 center">
+<h2></h2>
 <p>📌 <strong>Revisão de literatura:</strong></p>
 <blockquote>
 <p>“Liste as 5 principais abordagens teóricas sobre a Revolução Francesa, com 1 parágrafo cada. Para cada uma, indique um autor representativo e uma obra de referência.”</p>
@@ -629,7 +634,6 @@ Ollama, agentes, RAG.</li>
 </section>
 <section id="usos-no-estudo" class="slide level2 center">
 <h2>Usos no estudo</h2>
-<p>📖 Como chatbots podem ajudar:</p>
 <ul>
 <li><strong>Resumo</strong>: “Resuma este texto em 5 pontos-chave”<br>
 </li>
@@ -646,6 +650,9 @@ Ollama, agentes, RAG.</li>
 <blockquote>
 <p>“Aqui está um artigo de 10 páginas sobre X [cole o texto]. Produza um fichamento com: referência completa, tema central, argumento principal, 3 conceitos-chave, 2 citações relevantes com página.”</p>
 </blockquote>
+</section>
+<section id="section-2" class="slide level2 center">
+<h2></h2>
 <p>📌 <strong>Questões de estudo:</strong></p>
 <blockquote>
 <p>“Gere 8 questões de múltipla escolha sobre o capítulo 3 do texto abaixo, com 4 alternativas cada. Marque a resposta correta.”</p>
@@ -653,7 +660,6 @@ Ollama, agentes, RAG.</li>
 </section>
 <section id="usos-na-escrita-acadêmica" class="slide level2 center">
 <h2>Usos na escrita acadêmica</h2>
-<p>✍️ Como chatbots podem ajudar:</p>
 <ul>
 <li><strong>Planejamento</strong>: estruturar o roteiro de um artigo<br>
 </li>
@@ -670,12 +676,15 @@ Ollama, agentes, RAG.</li>
 <blockquote>
 <p>“Revise este parágrafo quanto a clareza, coerência e gramática. Aponte os problemas e sugira reescritas. Não reescreva o texto todo — apenas indique o que melhorar e como.”</p>
 </blockquote>
+</section>
+<section id="section-3" class="slide level2 center">
+<h2></h2>
 <p>📌 <strong>Planejamento:</strong></p>
 <blockquote>
 <p>“Preciso escrever um artigo de 20 páginas sobre X. Proponha uma estrutura com seções, subseções e estimativa de páginas por seção. Considere o formato IMRAD.”</p>
 </blockquote>
 </section>
-<section id="section-1" class="slide level2 center">
+<section id="section-4" class="slide level2 center">
 <h2></h2>
 <p>⚠️ <strong>Sempre verifique</strong>: fontes, citações e dados gerados pela IA.</p>
 </section>
@@ -736,24 +745,25 @@ Ollama, agentes, RAG.</li>
 <p>“O autor utilizou o ChatGPT (modelo GPT-5) como ferramenta auxiliar na revisão gramatical e organização de ideias deste trabalho. Todo o conteúdo, análise e argumentação são de responsabilidade exclusiva do autor.”</p>
 </blockquote>
 </section>
-<section id="portaria-cnpq-2.6642026-ia-generativa-e-integridade" class="slide level2 center">
-<h2>Portaria CNPq 2.664/2026: IA Generativa e Integridade</h2>
+<section id="portaria-cnpq-do-cnpq-ia-generativa-e-integridade" class="slide level2 center">
+<h2>Portaria CNPq do CNPq: IA Generativa e Integridade</h2>
 <p>📜 <strong><a href="http://memoria2.cnpq.br/web/guest/view/-/journal_content/56_INSTANCE_0oED/10157/23142775?COMPANY_ID=10132">Portaria CNPq nº 2.664, de 6 de março de 2026</a></strong> — Política de Integridade na Atividade Científica do CNPq</p>
+</section>
+<section id="section-5" class="slide level2 center">
+<h2></h2>
 <p>📌 <strong>Art. 9º, inciso I</strong> — Diretrizes de integridade na pesquisa:</p>
 <blockquote>
 <p><strong>c)</strong> declarar o uso de ferramentas de Inteligência Artificial Generativa (IAG), de qualquer espécie e em qualquer fase da pesquisa (concepção, redação, análise de dados, submissão), especificando a ferramenta utilizada e a finalidade;</p>
 </blockquote>
 </section>
-<section id="portaria-cnpq-2.6642026-vedações" class="slide level2 center">
-<h2>Portaria CNPq 2.664/2026: vedações</h2>
-<p>⚠️ O que a portaria <strong>veda</strong>:</p>
+<section id="o-que-a-portaria-veda" class="slide level2 center">
+<h2>⚠️ O que a portaria <strong>veda</strong></h2>
 <blockquote>
 <p><strong>d)</strong> é vedada a submissão de conteúdo gerado por IAG como se fosse de autoria humana, sendo os autores integralmente responsáveis pelo conteúdo final, inclusive por eventuais plágios ou imprecisões geradas pela IAG;</p>
 </blockquote>
 </section>
-<section id="portaria-cnpq-2.6642026-vedações-1" class="slide level2 center">
-<h2>Portaria CNPq 2.664/2026: vedações</h2>
-<p>⚠️ O que a portaria <strong>veda</strong>:</p>
+<section id="o-que-a-portaria-veda-1" class="slide level2 center">
+<h2>⚠️ O que a portaria <strong>veda</strong></h2>
 <blockquote>
 <p><strong>e)</strong> é vedada a inserção de projetos de pesquisa de terceiros em ferramentas de IAG para elaboração de pareceres científicos;</p>
 </blockquote>
@@ -767,9 +777,9 @@ Ollama, agentes, RAG.</li>
 ❌ <strong>Nunca</strong> submeter texto gerado por IA como se fosse seu<br>
 ❌ <strong>Nunca</strong> inserir projetos de terceiros em IAG para gerar pareceres<br>
 ✅ <strong>Responsabilidade total</strong> do autor sobre o conteúdo final</p>
-<blockquote>
-<p>💡 Se a IA alucinou uma citação e você incluiu no texto — <strong>a responsabilidade é sua.</strong></p>
-</blockquote>
+</section>
+<section id="se-a-ia-alucinou-uma-citação-e-você-incluiu-no-texto-a-responsabilidade-é-sua." class="slide level2 center">
+<h2>💡 Se a IA alucinou uma citação e você incluiu no texto, <strong>a responsabilidade é sua.</strong></h2>
 </section>
 <section id="infrações-e-sanções" class="slide level2 center">
 <h2>Infrações e sanções</h2>
@@ -782,9 +792,8 @@ Ollama, agentes, RAG.</li>
 <li><strong>Gravíssimas</strong>: fabricação/falsificação de dados, <strong>plágio</strong>, comercialização de autoria, condutas discriminatórias (revogação de fomento, devolução de recursos)</li>
 </ul>
 </section>
-<section id="section-2" class="slide level2 center">
-<h2></h2>
-<p>📌 Plágio — inclusive via IAG — é infração <strong>gravíssima</strong>.</p>
+<section id="plágio-inclusive-via-iag-é-infração-gravíssima." class="slide level2 center">
+<h2>📌 Plágio — inclusive via IAG — é infração <strong>gravíssima</strong>.</h2>
 </section>
 <section id="horizontes-avançados" class="slide level2 center">
 <h2>3. Horizontes avançados</h2>
@@ -801,9 +810,6 @@ Ollama, agentes, RAG.</li>
 </li>
 <li><strong>Personalização</strong>: crie personas e instruções permanentes</li>
 </ul>
-<blockquote>
-<p>💡 Essas vantagens são decisivas em contextos acadêmicos — especialmente com dados sensíveis.</p>
-</blockquote>
 </section>
 <section id="ollama-ia-no-seu-computador" class="slide level2 center">
 <h2>Ollama: IA no seu computador</h2>
@@ -817,13 +823,13 @@ Ollama, agentes, RAG.</li>
 </li>
 <li>Crie <strong>Modelfiles</strong> com instruções permanentes personalizadas</li>
 </ul>
-<blockquote>
-<p>💡 É como ter um ChatGPT privado no seu computador — ninguém vê seus textos.</p>
-</blockquote>
+</section>
+<section id="é-como-ter-um-chatgpt-privado-no-seu-computador-ninguém-vê-seus-textos." class="slide level2 center">
+<h2>💡 É como ter um ChatGPT privado no seu computador — ninguém vê seus textos.</h2>
 </section>
 <section id="modelfile-seu-assistente-sob-medida" class="slide level2 center">
 <h2>Modelfile: seu assistente sob medida</h2>
-<p>Um <strong>Modelfile</strong> define instruções permanentes para o modelo — um “system prompt” que nunca se perde:</p>
+<p>Define instruções permanentes para o modelo — um “system prompt” que nunca se perde:</p>
 <pre><code>FROM gemma3:4b
 
 SYSTEM """
@@ -868,9 +874,6 @@ PARAMETER num_ctx 4096</code></pre>
 </li>
 <li>Reduz alucinações e permite <strong>citar fontes</strong></li>
 </ul>
-<blockquote>
-<p>💡 É como o NotebookLM, mas com controle total: você define a base, o modelo e o acesso.</p>
-</blockquote>
 </section>
 <section id="rag-na-prática" class="slide level2 center">
 <h2>RAG na prática</h2>
@@ -884,10 +887,6 @@ PARAMETER num_ctx 4096</code></pre>
 </li>
 <li>O LLM gera a resposta <strong>apoiado nos seus documentos</strong></li>
 </ol>
-<p>📌 Ferramentas: <a href="https://www.llamaindex.ai/">LlamaIndex</a>, <a href="https://www.langchain.com/">LangChain</a>, <a href="https://anythingllm.com/">AnythingLLM</a>, <a href="https://privategpt.io/">PrivateGPT</a></p>
-<blockquote>
-<p>⚠️ RAG não elimina alucinação — mas <strong>reduz significativamente</strong> quando o documento está na base.</p>
-</blockquote>
 </section>
 <section id="codex-e-agentes-de-ia" class="slide level2 center">
 <h2>Codex e agentes de IA</h2>
@@ -909,9 +908,9 @@ PARAMETER num_ctx 4096</code></pre>
 </li>
 <li><strong>Privacidade</strong>: com modelos locais + agentes, seus dados nunca saem do computador</li>
 </ul>
-<blockquote>
-<p>💡 O horizonte é promissor, mas ainda está em consolidação — <strong>fica como convite para estudo futuro</strong>.</p>
-</blockquote>
+</section>
+<section id="o-horizonte-é-promissor-mas-ainda-está-em-consolidação-fica-como-convite-para-estudo-futuro." class="slide level2 center">
+<h2>💡 O horizonte é promissor, mas ainda está em consolidação — <strong>fica como convite para estudo futuro</strong>.</h2>
 </section>
 <section id="encerramento" class="slide level2 center">
 <h2>Encerramento</h2>
@@ -939,24 +938,33 @@ PARAMETER num_ctx 4096</code></pre>
 <td style="text-align: left;">Chatbot web</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Fichamento e resumo de textos</td>
-<td style="text-align: left;">NotebookLM ou chatbot web</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">Revisão gramatical, tradução</td>
 <td style="text-align: left;">Chatbot web</td>
 </tr>
-<tr class="even">
+<tr class="odd">
+<td style="text-align: left;">Fichamento e resumo de textos</td>
+<td style="text-align: left;">NotebookLM ou chatbot web</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="quando-usar-cada-ferramenta-1" class="slide level2 center">
+<h2>Quando usar cada ferramenta?</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Situação</th>
+<th style="text-align: left;">Recomendação</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
 <td style="text-align: left;">Análise de documentos sensíveis</td>
 <td style="text-align: left;">Modelo local (Ollama)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Reprodutibilidade em pesquisa</td>
 <td style="text-align: left;">Modelo local (Ollama) ou RAG</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Sem internet</td>
-<td style="text-align: left;">Modelo local (Ollama)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Pesquisa avançada em corpora</td>
