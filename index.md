@@ -6,7 +6,7 @@ date-format: full
 lang: pt-br
 format:
   revealjs:
-    theme: [serif, custom.scss]
+    theme: [default, _extensions/clean/clean.scss]
     slide-number: true
     incremental: false
     chalkboard:
@@ -21,7 +21,7 @@ description: "Oficina sobre IA generativa no contexto universitário: fundamento
 toc: false
 ---
 
-## {.center .title-slide}
+## {.center}
 
 ![Acesse a oficina online](imgs/qrcode.png){width=120px}
 
@@ -91,7 +91,7 @@ toc: false
 
 ---
 
-## 1. O que é IA generativa? {.center .part1}
+## 1. O que é IA generativa? {.center}
 
 ---
 
@@ -297,7 +297,7 @@ Resultado:
 
 ---
 
-## 2. Chatbots na prática acadêmica {.center .part2}
+## 2. Chatbots na prática acadêmica {.center}
 
 ---
 
@@ -540,7 +540,7 @@ Exemplo:
 
 ---
 
-## 3. Horizontes avançados {.center .part3}
+## 3. Horizontes avançados {.center}
 
 ---
 
